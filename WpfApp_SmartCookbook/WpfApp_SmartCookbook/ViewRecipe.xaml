@@ -17,10 +17,10 @@
         </Grid.Resources>
         <StackPanel Orientation="Vertical">
             <StackPanel Orientation="Vertical" Background="LightBlue">
-                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="The Cookbook App" VerticalAlignment="Top" FontWeight="Bold" FontSize="20" Margin="30,20,0,0"/>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="The Cookbook App" VerticalAlignment="Center" FontWeight="Bold" FontSize="20" Margin="20,20,0,10"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <TextBlock TextWrapping="Wrap" Text="View Recipe" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,15,380,10" FontSize="12">
+                <TextBlock TextWrapping="Wrap" Text="View recipe" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,10,380,10" FontSize="14">
                     <!--<TextBlock.TextDecorations>
                         <TextDecoration PenOffset="1"/>
                     </TextBlock.TextDecorations>-->
@@ -70,20 +70,20 @@
                 </StackPanel>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="5,0,0,0">
-                <StackPanel Orientation="Vertical" Margin="0,20,0,0" Width="250" MaxHeight="310">
+                <StackPanel Orientation="Vertical" Margin="0,20,0,0" Width="275" MaxHeight="310">
                     <TextBlock TextWrapping="Wrap" Text="Ingredients :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,0,0,0" FontSize="13">
                         <!--<TextBlock.TextDecorations>
                             <TextDecoration PenOffset="1"/>
                         </TextBlock.TextDecorations>-->
                     </TextBlock>
                     <Border BorderBrush="Gray" CornerRadius="6"
-                Padding="6" Margin="10,5,10,5" BorderThickness="0.5">
+                Padding="6" Margin="10,5,10,5" BorderThickness="0.25">
                     <ScrollViewer VerticalScrollBarVisibility="Auto" Height="240"><ItemsControl Name="Ic_ingredientList" ItemsSource="{Binding Path=ingredients}">
                         <ItemsControl.ItemTemplate>
                             <DataTemplate>
                                 <Grid Margin="0,0,0,0">
                                     <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
-                                        <TextBlock TextWrapping="Wrap" x:Name="Tbx_ingredientName" HorizontalAlignment="Left" Width="200" Margin="0,0,0,0" FontSize="12">
+                                        <TextBlock TextWrapping="Wrap" x:Name="Tbx_ingredientName" HorizontalAlignment="Left" Width="220" Margin="0,0,0,0" FontSize="13">
                                             <Run Text="{Binding ingredientName}"/>
                                             <Run Text=" "/>
                                             <Run Text="{Binding quantity}"/>
@@ -104,7 +104,7 @@
                     </Border>
                 </StackPanel>
                 <StackPanel Orientation="Vertical" Margin="0,20,0,0" MaxWidth="320" MaxHeight="310">
-                    <TextBlock TextWrapping="Wrap" Text="Instructions :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="35,0,0,0" FontSize="13">
+                    <TextBlock TextWrapping="Wrap" Text="Instructions :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,0,0,0" FontSize="13">
                         <!--<TextBlock.TextDecorations>
                             <TextDecoration PenOffset="1"/>
                         </TextBlock.TextDecorations>1.	Add the coconut oil to a large skillet on medium heat. Add minced garlic.
@@ -116,9 +116,9 @@
                     </TextBlock>
                     <StackPanel Orientation="Vertical" Width="315">
                         <Border BorderBrush="Gray" CornerRadius="6"
-                Padding="6" Margin="35,5,10,5" BorderThickness="0.5">
+                Padding="6" Margin="10,5,10,5" BorderThickness="0.25">
                         <ScrollViewer VerticalScrollBarVisibility="Auto" Height="240">
-                            <TextBlock TextWrapping="Wrap" Text="{Binding Path=instruction}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" FontSize="12">
+                            <TextBlock TextWrapping="Wrap" Text="{Binding Path=instruction}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" FontSize="13">
                         </TextBlock>
                         </ScrollViewer>
                     </Border>

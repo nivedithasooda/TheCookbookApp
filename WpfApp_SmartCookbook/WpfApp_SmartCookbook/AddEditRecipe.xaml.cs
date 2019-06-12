@@ -493,7 +493,7 @@ namespace WpfApp_SmartCookbook
                 {
                     if (!fromSave)
                     {
-                        MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Please enter a recipe name to save the recipe. Click yes to enter the name.", "Save recipe Confirmation", System.Windows.MessageBoxButton.YesNo);
+                        MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("You need to enter a recipe name to save the recipe. Click yes to enter the name.", "Save recipe confirmation", System.Windows.MessageBoxButton.YesNo);
                         if (messageBoxResult == MessageBoxResult.No || messageBoxResult == MessageBoxResult.Cancel || messageBoxResult == MessageBoxResult.None)
                         {
                             return 1;
@@ -520,10 +520,6 @@ namespace WpfApp_SmartCookbook
             ConvertValues(true);
 
         }
-        private void DeleteRecipeButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
 
         private void ConvertValues(bool fromSelect)
         {
@@ -534,7 +530,7 @@ namespace WpfApp_SmartCookbook
                 if (quantity != "")
                 {
                     Regex regEx = new Regex(@"^\d+\.?\d*$");
-                    if (!regEx.IsMatch(quantity))
+                    if (!regEx.IsMatch(quantity) || Convert.ToInt32(quantity) <= 0)
                     {
                         MessageBox.Show("Please enter a valid quantity", ":|", MessageBoxButton.OK, MessageBoxImage.Error);
                         Tbx_quantityEdit.Focus();
@@ -553,7 +549,7 @@ namespace WpfApp_SmartCookbook
                         {
                             if (Convert.ToInt32(quantity) > 50)
                             {
-                                MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("That is a huge quantity! Are you sure you want to proceed?", "Add Ingredient Confirmation", System.Windows.MessageBoxButton.YesNo);
+                                MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("That is a huge quantity! Are you sure you want to proceed?", "Add ingredient confirmation", System.Windows.MessageBoxButton.YesNo);
                                 if (messageBoxResult == MessageBoxResult.No || messageBoxResult == MessageBoxResult.Cancel || messageBoxResult == MessageBoxResult.None)
                                 {
                                     Tbx_quantity.Focus();

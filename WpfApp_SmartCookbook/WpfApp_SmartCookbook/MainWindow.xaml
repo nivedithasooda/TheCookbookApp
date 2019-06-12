@@ -5,30 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp_SmartCookbook.Classes"
         mc:Ignorable="d" IsVisibleChanged="Window_IsVisibleChanged"
-        Title="The Cookbook App" Height="660" Width="630">
+        Title="The Cookbook App" Height="670" Width="630">
     <Grid>
         <Grid.Resources>
             <local:Bool2String x:Key="star"></local:Bool2String>
             <local:PathToBaseDirectory x:Key="imagePath"></local:PathToBaseDirectory>
             <local:Bool2StringTooltip x:Key="tooltipHeart"></local:Bool2StringTooltip>
         </Grid.Resources>
-        <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <!--<ScrollViewer VerticalScrollBarVisibility="Auto">-->
             <StackPanel Orientation="Vertical">
                 <!--What's cooking today Background="BlanchedAlmond"-->
             <!--<TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="What do you have in your kitchen today?" VerticalAlignment="Top" FontWeight="Bold" FontSize="15" Margin="0,20,0,0"/>-->
-                    <StackPanel Orientation="Vertical" Background="LightBlue">
-                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="The Cookbook App" VerticalAlignment="Top" FontWeight="Bold" FontSize="20" Margin="30,20,0,0"/>
+                <StackPanel Orientation="Vertical" Background="LightBlue" VerticalAlignment="Center">
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="The Cookbook App" VerticalAlignment="Center" FontWeight="Bold" FontSize="20" Margin="20,20,0,10"/>
             </StackPanel>
                 <StackPanel>
                     <Button Content="Add new recipe" Click="Button_Click" HorizontalAlignment="Right" VerticalAlignment="Top" Width="90" Margin="0,10,10,0" ToolTip="Click to add new recipe"/>
-                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Search by ingredient(s) combination (maximum 3)" VerticalAlignment="Top" FontSize="12" Margin="30,10,0,0">
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Search by ingredient(s) combination (maximum 3)" VerticalAlignment="Top" FontSize="12" Margin="28,10,0,0">
                 <!--<TextBlock.TextDecorations>
                     <TextDecoration PenOffset="1"/>
                 </TextBlock.TextDecorations>-->
                     </TextBlock>
                     <StackPanel Orientation="Vertical">
                         <Border BorderBrush="Gray" CornerRadius="6"
-                Padding="6" Margin="10,1,10,5" BorderThickness="0.5">
+                Padding="6" Margin="10,2,10,5" BorderThickness="0.25">
                             <StackPanel Margin="0,12,0,0" Orientation="Vertical">
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock TextWrapping="Wrap" Text="Enter the ingredient" HorizontalAlignment="Left" Width="140" VerticalAlignment="Top" Margin="12,0,0,0"/>
@@ -47,7 +47,7 @@
                                 </StackPanel>
                             </StackPanel>
                         </Border>
-                        <StackPanel Orientation="Vertical" Margin="30,0,0,0">
+                        <StackPanel Orientation="Vertical" Margin="28,0,0,0">
                             <StackPanel Margin="140,5,30,0" Orientation="Vertical">
                                 <CheckBox x:Name="Cbx_getFavorites" Content="Get favorites" Click="Cbx_getFavorites_Checked" Width="100" HorizontalAlignment="Left"/>
                                 <CheckBox x:Name="Cbx_getMyRecipes" Content="Get my recipes" Click="Cbx_getMyRecipes_Checked" Width="100" Margin="0,5,0,0" HorizontalAlignment="Left"/>
@@ -60,10 +60,10 @@
                     </StackPanel>
                     <Border CornerRadius="6"
                 BorderBrush="Gray"
-                BorderThickness="1"
-                Padding="8" Margin="10,20,10,20" VerticalAlignment="Center">
+                BorderThickness="0.5"
+                Padding="8" Margin="10,15,10,20" VerticalAlignment="Center">
                         <StackPanel Orientation="Vertical" OverridesDefaultStyle="True" >
-                            <TextBlock x:Name="Tbk_recipeListTitle" TextWrapping="Wrap" Text="List of recipes :" Margin="10,0,0,0" Width="185" HorizontalAlignment="Left"/>
+                            <TextBlock x:Name="Tbk_recipeListTitle" TextWrapping="Wrap" Text="List of recipes :" Margin="5,0,0,5" Width="185" HorizontalAlignment="Left"/>
                             <TextBlock x:Name="Tbk_RecipeListEmpty" Text="No recipes found. Please filter by other options." Visibility="Collapsed" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="30,0,0,0"/>
 
 
@@ -71,7 +71,7 @@
                                 <ListBox.ItemsPanel>
                                     <ItemsPanelTemplate>
                                         <!--<ScrollViewer VerticalScrollBarVisibility="Auto" MaxHeight="300">-->
-                                        <WrapPanel Margin="15,10,10,10" Orientation="Horizontal" MaxWidth="550"/>
+                                        <WrapPanel Margin="20,10,10,10" Orientation="Horizontal" Width="510"/>
                                         <!--</ScrollViewer>-->
                                     </ItemsPanelTemplate>
                                 </ListBox.ItemsPanel>
@@ -104,6 +104,6 @@
                     </Border>
                 </StackPanel>
         </StackPanel>
-        </ScrollViewer>
+        <!--</ScrollViewer>-->
     </Grid>
 </Window>
