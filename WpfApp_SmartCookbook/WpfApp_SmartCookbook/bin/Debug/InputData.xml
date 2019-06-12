@@ -57,6 +57,78 @@
 	</instruction>
   </Recipe>
   <Recipe>
+    <id>3</id>
+    <isMyRecipe>false</isMyRecipe>
+    <name>Tomato chutney</name>
+    <description>A side dish that goes along with dosa, idli or roti.</description>
+    <timeRequiredHours>0</timeRequiredHours>
+    <timeRequiredMinutes>10</timeRequiredMinutes>
+    <servings>4</servings>
+    <isFavorite>false</isFavorite>
+    <isDelete>false</isDelete>
+    <image>\Images\tomatochutney.jpg</image>
+    <ingredients>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>1</ingredientId>
+        <quantity>350</quantity>
+        <measure>gram(s)</measure>
+        <ingredientName>Tomato</ingredientName>
+        <ingredientType>solid</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>2</ingredientId>
+        <quantity>2</quantity>
+        <measure>tablespoon(s)</measure>
+        <ingredientName>Coconut oil</ingredientName>
+        <ingredientType>cream</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>3</ingredientId>
+        <quantity>2</quantity>
+        <measure>teaspoon(s)</measure>
+        <ingredientName>Ginger powder</ingredientName>
+        <ingredientType>spice</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>4</ingredientId>
+        <quantity>1</quantity>
+        <measure>teaspoon(s)</measure>
+        <ingredientName>Salt</ingredientName>
+        <ingredientType>spice</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>5</ingredientId>
+        <quantity>1</quantity>
+        <measure>teaspoon(s)</measure>
+        <ingredientName>Chilli powder</ingredientName>
+        <ingredientType>spice</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>6</ingredientId>
+        <quantity>50</quantity>
+        <measure>ml</measure>
+        <ingredientName>Water</ingredientName>
+        <ingredientType>liquid</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>7</ingredientId>
+        <quantity>50</quantity>
+        <measure>gram(s)</measure>
+        <ingredientName>Split black gram</ingredientName>
+        <ingredientType>solid</ingredientType>
+      </RecipeIngredient>
+    </ingredients>
+    <instruction>1. Heat oil in a pan, add the spilt black gram(s) and sauté on a low flame until they start turning brown.\n2. Add the chopped tomatoes and salt stir them.\n3. After about a minute, add the chilli and ginger powders and cook the mixture for 6-7 minutes until the tomatoes are soft and mushy.\n4. Turn off the heat and let the mixture cool down.\n5. Once the mixture cools down, transfer the contents into a blender, add water and grind it to a smooth paste.
+</instruction>
+  </Recipe>
+  <Recipe>
     <id>4</id>
     <isMyRecipe>false</isMyRecipe>
     <name>Scrambled eggs</name>
@@ -201,6 +273,46 @@
 	</instruction>
   </Recipe>
   <Recipe>
+    <id>12</id>
+    <isMyRecipe>false</isMyRecipe>
+    <name>French fries</name>
+    <description>Potatoes cut into long strips and fried in deep fat .</description>
+    <timeRequiredHours>0</timeRequiredHours>
+    <timeRequiredMinutes>50</timeRequiredMinutes>
+    <servings>8</servings>
+    <isFavorite>false</isFavorite>
+    <isDelete>false</isDelete>
+    <image>\Images\frenchfries.jpeg</image>
+    <ingredients>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>1</ingredientId>
+        <quantity>2</quantity>
+        <measure>Kg(s)</measure>
+        <ingredientName>Potato</ingredientName>
+        <ingredientType>solid</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>2</ingredientId>
+        <quantity>400</quantity>
+        <measure>ml</measure>
+        <ingredientName>Oil</ingredientName>
+        <ingredientType>liquid</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>3</ingredientId>
+        <quantity>2</quantity>
+        <measure>tablespoon(s)</measure>
+        <ingredientName>Salt</ingredientName>
+        <ingredientType>Spice</ingredientType>
+      </RecipeIngredient>
+    </ingredients>
+    <instruction>1.	Peel and rinse the potatoes. Then cut them into sticks by cutting the potato in 4 or 5 vertical pieces, and then cutting each piece into sticks.\n 2. Place them in a large bowl and cover with cold water. Allow them to soak, 2 to 3 hours. (You can also stick them in the fridge and let them soak overnight.)\n 3. When you're ready to make the fries, drain off the water and lay the potatoes on 2 baking sheets lined with paper towels. Blot with paper towels to dry them.\n 4. Heat a few inches of oil in a heavy pot to 150°C. In 3 or 4 batches, cook the potatoes until soft, 4 to 5 minutes per batch. They should not be brown at this point! You just want to start the cooking process. Remove each batch and drain on new/dry paper towels.\n 5. Once all the potatoes have been fried at 150°C, turn up the heat until the oil reaches 200°C. When the oil's hot, start frying the potatoes in batches again, cooking until the fries are golden and crisp. Remove the potatoes from the oil and drain on paper towels.\n 6. Sprinkle with sea salt and dive in!
+	</instruction>
+  </Recipe>
+  <Recipe>
     <id>13</id>
     <isMyRecipe>true</isMyRecipe>
     <name>recipe</name>
@@ -319,259 +431,53 @@
     <instruction>ins</instruction>
   </Recipe>
   <Recipe>
-    <id>1</id>
+    <id>6</id>
     <isMyRecipe>false</isMyRecipe>
-    <name>Potato curry</name>
-    <description>A simple and easy-to-make potato curry recipe.</description>
+    <name>Mashed Potato</name>
+    <description>dish prepared by mashing boiled, peeled or unpeeled potatoes.</description>
     <timeRequiredHours>0</timeRequiredHours>
-    <timeRequiredMinutes>30</timeRequiredMinutes>
-    <servings>4</servings>
-    <isFavorite>true</isFavorite>
+    <timeRequiredMinutes>45</timeRequiredMinutes>
+    <servings>10</servings>
+    <isFavorite>false</isFavorite>
     <isDelete>false</isDelete>
-    <image>\Images\easy-potato-curry-1.jpg</image>
+    <image>\Images\mashedpotato.jpg</image>
     <ingredients>
       <RecipeIngredient>
         <recipeId>0</recipeId>
         <ingredientId>1</ingredientId>
-        <quantity>250</quantity>
-        <measure>gram(s)</measure>
+        <quantity>10</quantity>
+        <measure />
         <ingredientName>Potato</ingredientName>
-        <ingredientType>solid</ingredientType>
+        <ingredientType>misc</ingredientType>
       </RecipeIngredient>
       <RecipeIngredient>
         <recipeId>0</recipeId>
         <ingredientId>2</ingredientId>
-        <quantity>1</quantity>
-        <measure>tablespoon(s)</measure>
-        <ingredientName>Coconut oil</ingredientName>
-        <ingredientType>cream</ingredientType>
-      </RecipeIngredient>
-      <RecipeIngredient>
-        <recipeId>0</recipeId>
-        <ingredientId>3</ingredientId>
-        <quantity>200</quantity>
-        <measure>gram(s)</measure>
-        <ingredientName>Onion(s)</ingredientName>
-        <ingredientType>solid</ingredientType>
-      </RecipeIngredient>
-      <RecipeIngredient>
-        <recipeId>0</recipeId>
-        <ingredientId>4</ingredientId>
-        <quantity>200</quantity>
-        <measure>gram(s)</measure>
-        <ingredientName>Tomato(s)</ingredientName>
-        <ingredientType>solid</ingredientType>
-      </RecipeIngredient>
-      <RecipeIngredient>
-        <recipeId>0</recipeId>
-        <ingredientId>5</ingredientId>
-        <quantity>200</quantity>
-        <measure>ml</measure>
-        <ingredientName>Coconut milk</ingredientName>
-        <ingredientType>solid</ingredientType>
-      </RecipeIngredient>
-      <RecipeIngredient>
-        <recipeId>0</recipeId>
-        <ingredientId>6</ingredientId>
-        <quantity>1</quantity>
-        <measure>teaspoon(s)</measure>
-        <ingredientName>Curry powder</ingredientName>
-        <ingredientType>spice</ingredientType>
-      </RecipeIngredient>
-      <RecipeIngredient>
-        <recipeId>0</recipeId>
-        <ingredientId>7</ingredientId>
-        <quantity>1</quantity>
-        <measure>teaspoon(s)</measure>
-        <ingredientName>Turmeric</ingredientName>
-        <ingredientType>spice</ingredientType>
-      </RecipeIngredient>
-      <RecipeIngredient>
-        <recipeId>0</recipeId>
-        <ingredientId>8</ingredientId>
         <quantity>1</quantity>
         <measure>teaspoon(s)</measure>
         <ingredientName>Salt</ingredientName>
-        <ingredientType>spice</ingredientType>
-      </RecipeIngredient>
-      <RecipeIngredient>
-        <recipeId>0</recipeId>
-        <ingredientId>9</ingredientId>
-        <quantity>1</quantity>
-        <measure>teaspoon(s)</measure>
-        <ingredientName>Chilli powder</ingredientName>
-        <ingredientType>spice</ingredientType>
-      </RecipeIngredient>
-      <RecipeIngredient>
-        <recipeId>0</recipeId>
-        <ingredientId>11</ingredientId>
-        <quantity>1</quantity>
-        <measure>teaspoon(s)</measure>
-        <ingredientName>Garlic powder</ingredientName>
-        <ingredientType>spice</ingredientType>
-      </RecipeIngredient>
-      <RecipeIngredient>
-        <recipeId>0</recipeId>
-        <ingredientId>12</ingredientId>
-        <quantity>1</quantity>
-        <measure>teaspoon(s)</measure>
-        <ingredientName>Ginger powder</ingredientName>
-        <ingredientType>spice</ingredientType>
-      </RecipeIngredient>
-    </ingredients>
-    <instruction>1. Add the coconut oil to large skillet on medium heat.
-2. Add diced onion and cook until it starts turning translucent, about 5 minutes.
-3. Add coconut milk, diced tomatoes and all spices. Stir to combine.
-4. Bring to a low simmer and add potatoes.
-5. Cover and let simmer on low/medium until potatoes are softened, 10 - 15 minutes.
-6. Stir again and serve.
-	</instruction>
-  </Recipe>
-  <Recipe>
-    <id>15</id>
-    <isMyRecipe>true</isMyRecipe>
-    <name>rec</name>
-    <description>sdsdfdsfs</description>
-    <timeRequiredHours>2</timeRequiredHours>
-    <timeRequiredMinutes>0</timeRequiredMinutes>
-    <servings>1</servings>
-    <isFavorite>true</isFavorite>
-    <isDelete>true</isDelete>
-    <image>\Images\duskandnight.png</image>
-    <ingredients>
-      <RecipeIngredient>
-        <recipeId>0</recipeId>
-        <ingredientId>0</ingredientId>
-        <quantity>12</quantity>
-        <measure>gram(s)</measure>
-        <ingredientName>Tomato</ingredientName>
-        <ingredientType>solid</ingredientType>
-      </RecipeIngredient>
-    </ingredients>
-    <instruction>sgsdgdfgdfsgsdg</instruction>
-  </Recipe>
-  <Recipe>
-    <id>8</id>
-    <isMyRecipe>false</isMyRecipe>
-    <name>Chicken Tikka</name>
-    <description>Small pieces of boneless chicken baked using skewers on a brazier called angeethi after marinating in spices and yogurt.</description>
-    <timeRequiredHours>1</timeRequiredHours>
-    <timeRequiredMinutes>00</timeRequiredMinutes>
-    <servings>4</servings>
-    <isFavorite>false</isFavorite>
-    <isDelete>false</isDelete>
-    <image>\Images\chickentikka.jpg</image>
-    <ingredients>
-      <RecipeIngredient>
-        <recipeId>0</recipeId>
-        <ingredientId>1</ingredientId>
-        <quantity>800</quantity>
-        <measure>gram(s)</measure>
-        <ingredientName>Chicken</ingredientName>
-        <ingredientType>Solid</ingredientType>
-      </RecipeIngredient>
-      <RecipeIngredient>
-        <recipeId>0</recipeId>
-        <ingredientId>2</ingredientId>
-        <quantity>150</quantity>
-        <measure>gram(s)</measure>
-        <ingredientName>Yogurt</ingredientName>
-        <ingredientType>Cream</ingredientType>
+        <ingredientType>Spice</ingredientType>
       </RecipeIngredient>
       <RecipeIngredient>
         <recipeId>0</recipeId>
         <ingredientId>3</ingredientId>
-        <quantity>50</quantity>
-        <measure>gram(s)</measure>
+        <quantity>2</quantity>
+        <measure>tablespoon(s)</measure>
         <ingredientName>Butter</ingredientName>
         <ingredientType>Cream</ingredientType>
       </RecipeIngredient>
       <RecipeIngredient>
         <recipeId>0</recipeId>
         <ingredientId>4</ingredientId>
-        <quantity>80</quantity>
-        <measure>gram(s)</measure>
-        <ingredientName>ginger</ingredientName>
-        <ingredientType>Solid</ingredientType>
-      </RecipeIngredient>
-      <RecipeIngredient>
-        <recipeId>0</recipeId>
-        <ingredientId>5</ingredientId>
-        <quantity>0.5</quantity>
-        <measure>teaspoon(s)</measure>
-        <ingredientName>Cumin</ingredientName>
-        <ingredientType>Spice</ingredientType>
-      </RecipeIngredient>
-      <RecipeIngredient>
-        <recipeId>0</recipeId>
-        <ingredientId>6</ingredientId>
-        <quantity>0.5</quantity>
-        <measure>teaspoon(s)</measure>
-        <ingredientName>Coriander</ingredientName>
-        <ingredientType>Spice</ingredientType>
-      </RecipeIngredient>
-      <RecipeIngredient>
-        <recipeId>0</recipeId>
-        <ingredientId>7</ingredientId>
-        <quantity>0.5</quantity>
-        <measure>teaspoon(s)</measure>
-        <ingredientName>Chilli powder</ingredientName>
-        <ingredientType>Spice</ingredientType>
-      </RecipeIngredient>
-      <RecipeIngredient>
-        <recipeId>0</recipeId>
-        <ingredientId>8</ingredientId>
-        <quantity>0.5</quantity>
-        <measure>teaspoon(s)</measure>
-        <ingredientName>turmeric</ingredientName>
-        <ingredientType>Spice</ingredientType>
-      </RecipeIngredient>
-      <RecipeIngredient>
-        <recipeId>0</recipeId>
-        <ingredientId>9</ingredientId>
-        <quantity>2</quantity>
-        <measure />
-        <ingredientName>Lime juice</ingredientName>
-        <ingredientType>lequid</ingredientType>
-      </RecipeIngredient>
-      <RecipeIngredient>
-        <recipeId>0</recipeId>
-        <ingredientId>10</ingredientId>
-        <quantity>2</quantity>
-        <measure>tablespoon(s)</measure>
-        <ingredientName>Tomato puree</ingredientName>
-        <ingredientType>Spice</ingredientType>
-      </RecipeIngredient>
-      <RecipeIngredient>
-        <recipeId>0</recipeId>
-        <ingredientId>11</ingredientId>
-        <quantity>0.5</quantity>
-        <measure>teaspoon(s)</measure>
-        <ingredientName>Garam masala</ingredientName>
-        <ingredientType>Spice</ingredientType>
-      </RecipeIngredient>
-      <RecipeIngredient>
-        <recipeId>0</recipeId>
-        <ingredientId>12</ingredientId>
-        <quantity>50</quantity>
+        <quantity>100</quantity>
         <measure>ml</measure>
-        <ingredientName>Oil</ingredientName>
+        <ingredientName>Milk</ingredientName>
         <ingredientType>liquid</ingredientType>
       </RecipeIngredient>
-      <RecipeIngredient>
-        <recipeId>0</recipeId>
-        <ingredientId>11</ingredientId>
-        <quantity>1</quantity>
-        <measure>teaspoon(s)</measure>
-        <ingredientName>Salt</ingredientName>
-        <ingredientType>Spice</ingredientType>
-      </RecipeIngredient>
     </ingredients>
-    <instruction>1.	For the chicken tikka, cut the chicken into cubes large enough to be skewered (about 4cm/1½in cubes). Rub salt and pepper into the chicken and set aside.
- 2. In a blender, add half the yoghurt and all the remaining tikka ingredients. Blend to a smooth paste. Transfer to a large bowl and whisk in the remaining yoghurt. Taste to check for spiciness and add more chilli if preferred.
- 3. Mix the chicken in the yoghurt mixture. Cover with cling film and, if possible, leave the chicken to marinate in the fridge overnight, or at least 4–5 hours.
- 4. To cook the chicken, either preheat a grill to medium-high or prepare a barbecue. (If there is no other option you can use an oven set to its highest temperature.) Thread the chicken pieces onto metal skewers.
- 5. Grill the chicken for 8–10 minutes, basting occasionally with the yoghurt marinade. To check the chicken is cooked through, take one of the largest pieces and cut in half. If there is no sign of pink and the juices run clear the chicken is cooked.
+    <instruction>1.	Place potatoes in large saucepan; add enough water to cover. Add 3/4 teaspoon of the salt. Bring to a boil. Reduce heat to medium-low; cover loosely and boil gently for 15 to 20 minutes or until potatoes break apart easily when pierced with fork. Drain well. 
+ 2     Return potatoes to saucepan; shake saucepan gently over low heat for 1 to 2 minutes to evaporate any excess moisture.
+ 3. Mash potatoes with potato masher until no lumps remain. Add margarine, pepper and remaining 1/4 teaspoon salt; continue mashing, gradually adding enough milk to make potatoes smooth and creamy.
 	</instruction>
   </Recipe>
   <Recipe>
@@ -746,6 +652,130 @@
 	</instruction>
   </Recipe>
   <Recipe>
+    <id>8</id>
+    <isMyRecipe>false</isMyRecipe>
+    <name>Chicken Tikka</name>
+    <description>Small pieces of boneless chicken baked using skewers on a brazier called angeethi after marinating in spices and yogurt.</description>
+    <timeRequiredHours>1</timeRequiredHours>
+    <timeRequiredMinutes>00</timeRequiredMinutes>
+    <servings>4</servings>
+    <isFavorite>false</isFavorite>
+    <isDelete>false</isDelete>
+    <image>\Images\chickentikka.jpg</image>
+    <ingredients>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>1</ingredientId>
+        <quantity>800</quantity>
+        <measure>gram(s)</measure>
+        <ingredientName>Chicken</ingredientName>
+        <ingredientType>Solid</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>2</ingredientId>
+        <quantity>150</quantity>
+        <measure>gram(s)</measure>
+        <ingredientName>Yogurt</ingredientName>
+        <ingredientType>Cream</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>3</ingredientId>
+        <quantity>50</quantity>
+        <measure>gram(s)</measure>
+        <ingredientName>Butter</ingredientName>
+        <ingredientType>Cream</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>4</ingredientId>
+        <quantity>80</quantity>
+        <measure>gram(s)</measure>
+        <ingredientName>ginger</ingredientName>
+        <ingredientType>Solid</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>5</ingredientId>
+        <quantity>0.5</quantity>
+        <measure>teaspoon(s)</measure>
+        <ingredientName>Cumin</ingredientName>
+        <ingredientType>Spice</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>6</ingredientId>
+        <quantity>0.5</quantity>
+        <measure>teaspoon(s)</measure>
+        <ingredientName>Coriander</ingredientName>
+        <ingredientType>Spice</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>7</ingredientId>
+        <quantity>0.5</quantity>
+        <measure>teaspoon(s)</measure>
+        <ingredientName>Chilli powder</ingredientName>
+        <ingredientType>Spice</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>8</ingredientId>
+        <quantity>0.5</quantity>
+        <measure>teaspoon(s)</measure>
+        <ingredientName>turmeric</ingredientName>
+        <ingredientType>Spice</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>9</ingredientId>
+        <quantity>2</quantity>
+        <measure />
+        <ingredientName>Lime juice</ingredientName>
+        <ingredientType>lequid</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>10</ingredientId>
+        <quantity>2</quantity>
+        <measure>tablespoon(s)</measure>
+        <ingredientName>Tomato puree</ingredientName>
+        <ingredientType>Spice</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>11</ingredientId>
+        <quantity>0.5</quantity>
+        <measure>teaspoon(s)</measure>
+        <ingredientName>Garam masala</ingredientName>
+        <ingredientType>Spice</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>12</ingredientId>
+        <quantity>50</quantity>
+        <measure>ml</measure>
+        <ingredientName>Oil</ingredientName>
+        <ingredientType>liquid</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>11</ingredientId>
+        <quantity>1</quantity>
+        <measure>teaspoon(s)</measure>
+        <ingredientName>Salt</ingredientName>
+        <ingredientType>Spice</ingredientType>
+      </RecipeIngredient>
+    </ingredients>
+    <instruction>1.	For the chicken tikka, cut the chicken into cubes large enough to be skewered (about 4cm/1½in cubes). Rub salt and pepper into the chicken and set aside.
+ 2. In a blender, add half the yoghurt and all the remaining tikka ingredients. Blend to a smooth paste. Transfer to a large bowl and whisk in the remaining yoghurt. Taste to check for spiciness and add more chilli if preferred.
+ 3. Mix the chicken in the yoghurt mixture. Cover with cling film and, if possible, leave the chicken to marinate in the fridge overnight, or at least 4–5 hours.
+ 4. To cook the chicken, either preheat a grill to medium-high or prepare a barbecue. (If there is no other option you can use an oven set to its highest temperature.) Thread the chicken pieces onto metal skewers.
+ 5. Grill the chicken for 8–10 minutes, basting occasionally with the yoghurt marinade. To check the chicken is cooked through, take one of the largest pieces and cut in half. If there is no sign of pink and the juices run clear the chicken is cooked.
+	</instruction>
+  </Recipe>
+  <Recipe>
     <id>11</id>
     <isMyRecipe>false</isMyRecipe>
     <name>Lemon rice</name>
@@ -837,177 +867,6 @@
 	</instruction>
   </Recipe>
   <Recipe>
-    <id>3</id>
-    <isMyRecipe>false</isMyRecipe>
-    <name>Tomato chutney</name>
-    <description>A side dish that goes along with dosa, idli or roti.</description>
-    <timeRequiredHours>0</timeRequiredHours>
-    <timeRequiredMinutes>10</timeRequiredMinutes>
-    <servings>4</servings>
-    <isFavorite>false</isFavorite>
-    <isDelete>false</isDelete>
-    <image>\Images\tomatochutney.jpg</image>
-    <ingredients>
-      <RecipeIngredient>
-        <recipeId>0</recipeId>
-        <ingredientId>1</ingredientId>
-        <quantity>350</quantity>
-        <measure>gram(s)</measure>
-        <ingredientName>Tomato</ingredientName>
-        <ingredientType>solid</ingredientType>
-      </RecipeIngredient>
-      <RecipeIngredient>
-        <recipeId>0</recipeId>
-        <ingredientId>2</ingredientId>
-        <quantity>2</quantity>
-        <measure>tablespoon(s)</measure>
-        <ingredientName>Coconut oil</ingredientName>
-        <ingredientType>cream</ingredientType>
-      </RecipeIngredient>
-      <RecipeIngredient>
-        <recipeId>0</recipeId>
-        <ingredientId>3</ingredientId>
-        <quantity>2</quantity>
-        <measure>teaspoon(s)</measure>
-        <ingredientName>Ginger powder</ingredientName>
-        <ingredientType>spice</ingredientType>
-      </RecipeIngredient>
-      <RecipeIngredient>
-        <recipeId>0</recipeId>
-        <ingredientId>4</ingredientId>
-        <quantity>1</quantity>
-        <measure>teaspoon(s)</measure>
-        <ingredientName>Salt</ingredientName>
-        <ingredientType>spice</ingredientType>
-      </RecipeIngredient>
-      <RecipeIngredient>
-        <recipeId>0</recipeId>
-        <ingredientId>5</ingredientId>
-        <quantity>1</quantity>
-        <measure>teaspoon(s)</measure>
-        <ingredientName>Chilli powder</ingredientName>
-        <ingredientType>spice</ingredientType>
-      </RecipeIngredient>
-      <RecipeIngredient>
-        <recipeId>0</recipeId>
-        <ingredientId>6</ingredientId>
-        <quantity>50</quantity>
-        <measure>ml</measure>
-        <ingredientName>Water</ingredientName>
-        <ingredientType>liquid</ingredientType>
-      </RecipeIngredient>
-      <RecipeIngredient>
-        <recipeId>0</recipeId>
-        <ingredientId>7</ingredientId>
-        <quantity>50</quantity>
-        <measure>gram(s)</measure>
-        <ingredientName>Split black gram</ingredientName>
-        <ingredientType>solid</ingredientType>
-      </RecipeIngredient>
-    </ingredients>
-    <instruction>1. Heat oil in a pan, add the spilt black gram(s) and sauté on a low flame until they start turning brown.
-2. Add the chopped tomatoes and salt stir them.
-3. After about a minute, add the chilli and ginger powders and cook the mixture for 6-7 minutes until the tomatoes are soft and mushy.
-4. Turn off the heat and let the mixture cool down.
-5. Once the mixture cools down, transfer the contents into a blender, add water and grind it to a smooth paste.
-</instruction>
-  </Recipe>
-  <Recipe>
-    <id>6</id>
-    <isMyRecipe>false</isMyRecipe>
-    <name>Mashed Potato</name>
-    <description>dish prepared by mashing boiled, peeled or unpeeled potatoes.</description>
-    <timeRequiredHours>0</timeRequiredHours>
-    <timeRequiredMinutes>45</timeRequiredMinutes>
-    <servings>10</servings>
-    <isFavorite>false</isFavorite>
-    <isDelete>false</isDelete>
-    <image>\Images\mashedpotato.jpg</image>
-    <ingredients>
-      <RecipeIngredient>
-        <recipeId>0</recipeId>
-        <ingredientId>1</ingredientId>
-        <quantity>10</quantity>
-        <measure />
-        <ingredientName>Potato</ingredientName>
-        <ingredientType>misc</ingredientType>
-      </RecipeIngredient>
-      <RecipeIngredient>
-        <recipeId>0</recipeId>
-        <ingredientId>2</ingredientId>
-        <quantity>1</quantity>
-        <measure>teaspoon(s)</measure>
-        <ingredientName>Salt</ingredientName>
-        <ingredientType>Spice</ingredientType>
-      </RecipeIngredient>
-      <RecipeIngredient>
-        <recipeId>0</recipeId>
-        <ingredientId>3</ingredientId>
-        <quantity>2</quantity>
-        <measure>tablespoon(s)</measure>
-        <ingredientName>Butter</ingredientName>
-        <ingredientType>Cream</ingredientType>
-      </RecipeIngredient>
-      <RecipeIngredient>
-        <recipeId>0</recipeId>
-        <ingredientId>4</ingredientId>
-        <quantity>100</quantity>
-        <measure>ml</measure>
-        <ingredientName>Milk</ingredientName>
-        <ingredientType>liquid</ingredientType>
-      </RecipeIngredient>
-    </ingredients>
-    <instruction>1.	Place potatoes in large saucepan; add enough water to cover. Add 3/4 teaspoon of the salt. Bring to a boil. Reduce heat to medium-low; cover loosely and boil gently for 15 to 20 minutes or until potatoes break apart easily when pierced with fork. Drain well. 
- 2     Return potatoes to saucepan; shake saucepan gently over low heat for 1 to 2 minutes to evaporate any excess moisture.
- 3. Mash potatoes with potato masher until no lumps remain. Add margarine, pepper and remaining 1/4 teaspoon salt; continue mashing, gradually adding enough milk to make potatoes smooth and creamy.
-	</instruction>
-  </Recipe>
-  <Recipe>
-    <id>12</id>
-    <isMyRecipe>false</isMyRecipe>
-    <name>French fries</name>
-    <description>Potatoes cut into long strips and fried in deep fat .</description>
-    <timeRequiredHours>0</timeRequiredHours>
-    <timeRequiredMinutes>50</timeRequiredMinutes>
-    <servings>8</servings>
-    <isFavorite>false</isFavorite>
-    <isDelete>false</isDelete>
-    <image>\Images\frenchfries.jpeg</image>
-    <ingredients>
-      <RecipeIngredient>
-        <recipeId>0</recipeId>
-        <ingredientId>1</ingredientId>
-        <quantity>2</quantity>
-        <measure>Kg(s)</measure>
-        <ingredientName>Potato</ingredientName>
-        <ingredientType>solid</ingredientType>
-      </RecipeIngredient>
-      <RecipeIngredient>
-        <recipeId>0</recipeId>
-        <ingredientId>2</ingredientId>
-        <quantity>400</quantity>
-        <measure>ml</measure>
-        <ingredientName>Oil</ingredientName>
-        <ingredientType>liquid</ingredientType>
-      </RecipeIngredient>
-      <RecipeIngredient>
-        <recipeId>0</recipeId>
-        <ingredientId>3</ingredientId>
-        <quantity>2</quantity>
-        <measure>tablespoon(s)</measure>
-        <ingredientName>Salt</ingredientName>
-        <ingredientType>Spice</ingredientType>
-      </RecipeIngredient>
-    </ingredients>
-    <instruction>1.	Peel and rinse the potatoes. Then cut them into sticks by cutting the potato in 4 or 5 vertical pieces, and then cutting each piece into sticks.
- 2. Place them in a large bowl and cover with cold water. Allow them to soak, 2 to 3 hours. (You can also stick them in the fridge and let them soak overnight.)
- 3. When you're ready to make the fries, drain off the water and lay the potatoes on 2 baking sheets lined with paper towels. Blot with paper towels to dry them.
- 4. Heat a few inches of oil in a heavy pot to 150°C. In 3 or 4 batches, cook the potatoes until soft, 4 to 5 minutes per batch. They should not be brown at this point! You just want to start the cooking process. Remove each batch and drain on new/dry paper towels.
- 5. Once all the potatoes have been fried at 150°C, turn up the heat until the oil reaches 200°C. When the oil's hot, start frying the potatoes in batches again, cooking until the fries are golden and crisp. Remove the potatoes from the oil and drain on paper towels.
- 6. Sprinkle with sea salt and dive in!
-	</instruction>
-  </Recipe>
-  <Recipe>
     <id>5</id>
     <isMyRecipe>false</isMyRecipe>
     <name>Brownie Bite</name>
@@ -1034,6 +893,138 @@
  4. Bake half the time of regular brownie recipe or approximately from 12 to 20 minutes. Test with toothpick. Do not overcook brownies.
  5. Allow to cool in the pan for 10 minutes. Remove for complete cooling on wire rack.
  6. Serve and enjoy!
+	</instruction>
+  </Recipe>
+  <Recipe>
+    <id>15</id>
+    <isMyRecipe>true</isMyRecipe>
+    <name>rec</name>
+    <description>sdsdfdsfs</description>
+    <timeRequiredHours>2</timeRequiredHours>
+    <timeRequiredMinutes>0</timeRequiredMinutes>
+    <servings>1</servings>
+    <isFavorite>true</isFavorite>
+    <isDelete>true</isDelete>
+    <image>\Images\duskandnight.png</image>
+    <ingredients>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>0</ingredientId>
+        <quantity>12</quantity>
+        <measure>gram(s)</measure>
+        <ingredientName>Tomato</ingredientName>
+        <ingredientType>solid</ingredientType>
+      </RecipeIngredient>
+    </ingredients>
+    <instruction>sgsdgdfgdfsgsdg</instruction>
+  </Recipe>
+  <Recipe>
+    <id>1</id>
+    <isMyRecipe>true</isMyRecipe>
+    <name>Potato curry</name>
+    <description>A simple and easy-to-make potato curry recipe.</description>
+    <timeRequiredHours>0</timeRequiredHours>
+    <timeRequiredMinutes>30</timeRequiredMinutes>
+    <servings>4</servings>
+    <isFavorite>true</isFavorite>
+    <isDelete>false</isDelete>
+    <image>\Images\easy-potato-curry-1.jpg</image>
+    <ingredients>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>1</ingredientId>
+        <quantity>250</quantity>
+        <measure>gram(s)</measure>
+        <ingredientName>Potato</ingredientName>
+        <ingredientType>solid</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>2</ingredientId>
+        <quantity>1</quantity>
+        <measure>tablespoon(s)</measure>
+        <ingredientName>Coconut oil</ingredientName>
+        <ingredientType>cream</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>3</ingredientId>
+        <quantity>200</quantity>
+        <measure>gram(s)</measure>
+        <ingredientName>Onion(s)</ingredientName>
+        <ingredientType>solid</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>4</ingredientId>
+        <quantity>200</quantity>
+        <measure>gram(s)</measure>
+        <ingredientName>Tomato(s)</ingredientName>
+        <ingredientType>solid</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>5</ingredientId>
+        <quantity>200</quantity>
+        <measure>ml</measure>
+        <ingredientName>Coconut milk</ingredientName>
+        <ingredientType>solid</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>6</ingredientId>
+        <quantity>1</quantity>
+        <measure>teaspoon(s)</measure>
+        <ingredientName>Curry powder</ingredientName>
+        <ingredientType>spice</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>7</ingredientId>
+        <quantity>1</quantity>
+        <measure>teaspoon(s)</measure>
+        <ingredientName>Turmeric</ingredientName>
+        <ingredientType>spice</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>8</ingredientId>
+        <quantity>1</quantity>
+        <measure>teaspoon(s)</measure>
+        <ingredientName>Salt</ingredientName>
+        <ingredientType>spice</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>9</ingredientId>
+        <quantity>1</quantity>
+        <measure>teaspoon(s)</measure>
+        <ingredientName>Chilli powder</ingredientName>
+        <ingredientType>spice</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>11</ingredientId>
+        <quantity>1</quantity>
+        <measure>teaspoon(s)</measure>
+        <ingredientName>Garlic powder</ingredientName>
+        <ingredientType>spice</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>12</ingredientId>
+        <quantity>1</quantity>
+        <measure>teaspoon(s)</measure>
+        <ingredientName>Ginger powder</ingredientName>
+        <ingredientType>spice</ingredientType>
+      </RecipeIngredient>
+    </ingredients>
+    <instruction>1. Add the coconut oil to large skillet on medium heat.
+2. Add diced onion and cook until it starts turning translucent, about 5 minutes.
+3. Add coconut milk, diced tomatoes and all spices. Stir to combine.
+4. Bring to a low simmer and add potatoes.
+5. Cover and let simmer on low/medium until potatoes are softened, 10 - 15 minutes.
+6. Stir again and serve.
 	</instruction>
   </Recipe>
   <Recipe>
@@ -1141,44 +1132,5 @@
  2. Add the chicken, tomato paste, and spices. Cook for 5-6 minutes or until everything is cooked through.
  3. Add the heavy cream and simmer for 8-10 minutes stirring occasionally. Serve over Basmati rice or with naan.
 	</instruction>
-  </Recipe>
-  <Recipe>
-    <id>16</id>
-    <isMyRecipe>true</isMyRecipe>
-    <name>New</name>
-    <description>assad</description>
-    <timeRequiredHours>0</timeRequiredHours>
-    <timeRequiredMinutes>0</timeRequiredMinutes>
-    <servings>1</servings>
-    <isFavorite>false</isFavorite>
-    <isDelete>false</isDelete>
-    <image>\Images\duskandnight.png</image>
-    <ingredients>
-      <RecipeIngredient>
-        <recipeId>0</recipeId>
-        <ingredientId>0</ingredientId>
-        <quantity>0</quantity>
-        <measure>gram(s)</measure>
-        <ingredientName>Tomato</ingredientName>
-        <ingredientType>solid</ingredientType>
-      </RecipeIngredient>
-      <RecipeIngredient>
-        <recipeId>0</recipeId>
-        <ingredientId>0</ingredientId>
-        <quantity>1</quantity>
-        <measure>gram(s)</measure>
-        <ingredientName>Potato</ingredientName>
-        <ingredientType>solid</ingredientType>
-      </RecipeIngredient>
-      <RecipeIngredient>
-        <recipeId>0</recipeId>
-        <ingredientId>0</ingredientId>
-        <quantity>0</quantity>
-        <measure>gram(s)</measure>
-        <ingredientName>Sugar</ingredientName>
-        <ingredientType>solid</ingredientType>
-      </RecipeIngredient>
-    </ingredients>
-    <instruction />
   </Recipe>
 </ArrayOfRecipe>

@@ -107,7 +107,7 @@ namespace WpfApp_SmartCookbook
                     maxValue = 59;
                     break;
                 case "hours":
-                    maxValue = 24;
+                    maxValue = 23;
                     break;
             }
 
