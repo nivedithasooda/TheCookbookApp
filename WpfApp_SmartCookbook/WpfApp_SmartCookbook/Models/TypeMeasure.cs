@@ -49,6 +49,8 @@ namespace WpfApp_SmartCookbook.models
                 case "spice":
                     measures.Add(Measurement.teaspoon);
                     measures.Add(Measurement.tablespoon);
+                    measures.Add(Measurement.gram);
+                    measures.Add(Measurement.kg);
                     break;
                 default:
                     break;

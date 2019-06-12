@@ -90,7 +90,7 @@
                                 </StackPanel>
                                 <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
                                     <TextBlock TextWrapping="Wrap" Text="Quantity" Width="120"/>
-                                    <TextBox TextWrapping="Wrap" x:Name="Tbx_quantity" Text="" Width="40" HorizontalAlignment="Left" MaxLength="5" VerticalAlignment="Center" Margin="0,0,5,0" KeyDown="Tbx_quantity_KeyDown"/>
+                                    <TextBox TextWrapping="Wrap" x:Name="Tbx_quantity" MaxLength="4" Text="" Width="40" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,0,5,0" KeyDown="Tbx_quantity_KeyDown"/>
                                     <ComboBox x:Name="Cbx_measure" SelectedItem="" Width="97" VerticalAlignment="Top" Padding="2,1" Visibility="Collapsed"/>
                                 </StackPanel>
                                 <!--<StackPanel Orientation="Horizontal" Margin="0,0,0,5"> Padding="0,2"-->
@@ -121,7 +121,7 @@
                                 </StackPanel>
                                 <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
                                     <TextBlock TextWrapping="Wrap" Text="Quantity" Width="120"/>
-                                    <TextBox TextWrapping="Wrap" x:Name="Tbx_quantityEdit" Text="{Binding quantity}" Width="40" HorizontalAlignment="Left" MaxLength="5" VerticalAlignment="Center" Margin="0,0,10,0" KeyUp="Tbx_quantityEdit_KeyUp"/>
+                                        <TextBox TextWrapping="Wrap" x:Name="Tbx_quantityEdit" MaxLength="4" Text="{Binding quantity}" Width="40" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,0,10,0" KeyUp="Tbx_quantityEdit_KeyUp"/>
                                     <ComboBox x:Name="Cbx_measureEdit" SelectedItem="{Binding measure}" Width="97" VerticalAlignment="Top" Padding="2,1" SelectionChanged="Cbx_measureEdit_SelectionChanged"/>
                                 </StackPanel>
                                 <!--<StackPanel Orientation="Horizontal" Margin="0,0,0,5"> Padding="0,2"-->
@@ -166,8 +166,8 @@
                             <StackPanel x:Name="Sp_button" Margin="0,0,0,0" Orientation="Horizontal">
                                 <Button x:Name="UpdateRecipeButton" Content="Update Recipe" HorizontalAlignment="Left"   
                                 VerticalAlignment="Top" Click="UpdateRecipeButton_Click"/>
-                                <Button x:Name="DeleteRecipeButton" Margin="30,0,0,0" Content="Delete Recipe" HorizontalAlignment="Left"   
-                                VerticalAlignment="Top" Click="DeleteRecipeButton_Click"/>
+                                <!--<Button x:Name="DeleteRecipeButton" Margin="30,0,0,0" Content="Delete Recipe" HorizontalAlignment="Left"   
+                                VerticalAlignment="Top" Click="DeleteRecipeButton_Click"/>-->
                             </StackPanel>
                         </StackPanel>
                         <!--</StackPanel>-->

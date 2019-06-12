@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp_SmartCookbook.Classes"
         mc:Ignorable="d" IsVisibleChanged="Window_IsVisibleChanged"
-        Title="The Cookbook App" Height="650" Width="630">
+        Title="The Cookbook App" Height="660" Width="630">
     <Grid>
         <Grid.Resources>
             <local:Bool2String x:Key="star"></local:Bool2String>

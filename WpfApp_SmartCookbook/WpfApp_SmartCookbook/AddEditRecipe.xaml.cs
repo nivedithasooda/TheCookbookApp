@@ -79,7 +79,7 @@ namespace WpfApp_SmartCookbook
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            var windowClose = SaveRecipe();
+            var windowClose = SaveRecipe(false);
             if (windowClose == 1)
             {
                 Owner.Visibility = Visibility.Visible;
@@ -235,7 +235,7 @@ namespace WpfApp_SmartCookbook
                     else
                     {
                         Regex regEx = new Regex(@"^\d+\.?\d*$");
-                        if (!regEx.IsMatch(quantity))
+                        if (!regEx.IsMatch(quantity) || Convert.ToInt32(quantity) <= 0)//newly added
                         {
                             MessageBox.Show("Please enter a valid quantity", ":|", MessageBoxButton.OK, MessageBoxImage.Error);
                             Tbx_quantity.Focus();
@@ -251,6 +251,18 @@ namespace WpfApp_SmartCookbook
                             }
                             else if (measure == Measurement.kg || measure == Measurement.liter)
                             {
+                                //newly added
+                                if (Convert.ToInt32(quantity) > 50)
+                                {
+                                    MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("That is a huge quantity! Are you sure you want to proceed?", "Add Ingredient Confirmation", System.Windows.MessageBoxButton.YesNo);
+                                    if (messageBoxResult == MessageBoxResult.No || messageBoxResult == MessageBoxResult.Cancel || messageBoxResult == MessageBoxResult.None)
+                                    {
+                                        Tbx_quantity.Focus();
+                                        Tbx_quantityEdit.Focus();
+                                        return;
+                                    }
+                                }
+
                                 var converted = ConvertTomillis(quantity, measure);
                                 quantity = converted[1];
                                 measure = converted[0];
@@ -390,7 +402,7 @@ namespace WpfApp_SmartCookbook
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
-            var windowClose = SaveRecipe();
+            var windowClose = SaveRecipe(true);
             if (windowClose == 1)
             {
                 Owner.Visibility = Visibility.Visible;
@@ -400,7 +412,7 @@ namespace WpfApp_SmartCookbook
 
         private void UpdateRecipeButton_Click(object sender, RoutedEventArgs e)
         {
-            var windowClose = SaveRecipe();
+            var windowClose = SaveRecipe(true);
             if (windowClose == 1)
             {
                 Owner.Visibility = Visibility.Visible;
@@ -408,7 +420,7 @@ namespace WpfApp_SmartCookbook
             }
         }
 
-        private int SaveRecipe()
+        private int SaveRecipe(bool fromSave)
         {
             if (Tbx_recipeName.Text != "" || Tbx_recipeDescription.Text.Trim() != "" || Tbx_instructions.Text.Trim() != "" || Tbx_image.Text != "" || Lbx_ingredients.Items.Count > 0)
                 storeData = true;
@@ -479,9 +491,25 @@ namespace WpfApp_SmartCookbook
                 }
                 else
                 {
-                    MessageBox.Show("Please enter a recipe name to save the recipe.", ":|", MessageBoxButton.OK, MessageBoxImage.Error);
-                    Tbx_recipeName.Focus();
-                    return 0;
+                    if (!fromSave)
+                    {
+                        MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Please enter a recipe name to save the recipe. Click yes to enter the name.", "Save recipe Confirmation", System.Windows.MessageBoxButton.YesNo);
+                        if (messageBoxResult == MessageBoxResult.No || messageBoxResult == MessageBoxResult.Cancel || messageBoxResult == MessageBoxResult.None)
+                        {
+                            return 1;
+                        }
+                        else if (messageBoxResult == MessageBoxResult.Yes)
+                        {
+                            Tbx_recipeName.Focus();
+                            return 0;
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please enter a recipe name to save the recipe.", ":|", MessageBoxButton.OK, MessageBoxImage.Error);
+                        Tbx_recipeName.Focus();
+                        return 0;
+                    }
                 }
             }
             return 1;
@@ -489,7 +517,7 @@ namespace WpfApp_SmartCookbook
 
         private void Cbx_measureEdit_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            ConvertValues();
+            ConvertValues(true);
 
         }
         private void DeleteRecipeButton_Click(object sender, RoutedEventArgs e)
@@ -497,7 +525,7 @@ namespace WpfApp_SmartCookbook
 
         }
 
-        private void ConvertValues()
+        private void ConvertValues(bool fromSelect)
         {
             if (Cbx_measureEdit.SelectedItem != null)
             {
@@ -515,10 +543,25 @@ namespace WpfApp_SmartCookbook
                     {
                         var converted = ConvertToKilos(quantity, measure);
                         quantity = converted[1];
+                        //var som = (Convert.ToDecimal(converted[1]));
+                        //Decimal.Round(som, 2);
                         measure = converted[0];
                     }
                     else if (Cbx_measureEdit.SelectedItem.ToString() == Measurement.kg || Cbx_measureEdit.SelectedItem.ToString() == Measurement.liter)
                     {
+                        if (!fromSelect)
+                        {
+                            if (Convert.ToInt32(quantity) > 50)
+                            {
+                                MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("That is a huge quantity! Are you sure you want to proceed?", "Add Ingredient Confirmation", System.Windows.MessageBoxButton.YesNo);
+                                if (messageBoxResult == MessageBoxResult.No || messageBoxResult == MessageBoxResult.Cancel || messageBoxResult == MessageBoxResult.None)
+                                {
+                                    Tbx_quantity.Focus();
+                                    Tbx_quantityEdit.Focus();
+                                    return;
+                                }
+                            }
+                        }
                         var converted = ConvertTomillis(quantity, measure);
                         quantity = converted[1];
                         measure = converted[0];
@@ -538,7 +581,7 @@ namespace WpfApp_SmartCookbook
 
         private void Tbx_quantityEdit_KeyUp(object sender, KeyEventArgs e)
         {
-            ConvertValues();
+            ConvertValues(false);
         }
     }
 }
