@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -31,11 +32,15 @@ namespace WpfApp_SmartCookbook
         public AddEditRecipe()
         {
             InitializeComponent();
+            Tbx_EditTitle.Visibility = Visibility.Collapsed;
             Cbx_servingsEdit.Visibility = Visibility.Collapsed;
+            Sp_button.Visibility = Visibility.Collapsed;
             Cbx_minutesEdit.Visibility = Visibility.Collapsed;
             Cbx_hoursEdit.Visibility = Visibility.Collapsed;
             Cbx_servings.Visibility = Visibility.Visible;
             Cbx_minutes.Visibility = Visibility.Visible;
+            Tbx_AddTitle.Visibility = Visibility.Visible;
+            SaveButton.Visibility = Visibility.Visible;
             Cbx_hours.Visibility = Visibility.Visible;
             Cbx_servings.ItemsSource = GetComboboxOptions("servings");
             Cbx_servings.SelectedIndex = 0;
@@ -43,17 +48,12 @@ namespace WpfApp_SmartCookbook
             Cbx_minutes.SelectedIndex = 0;
             Cbx_hours.ItemsSource = GetComboboxOptions("hours");
             Cbx_hours.SelectedIndex = 0;
-            Tbx_AddTitle.Visibility = Visibility.Visible;
-            Tbx_EditTitle.Visibility = Visibility.Collapsed;
-            SaveButton.Visibility = Visibility.Visible;
-            Sp_button.Visibility = Visibility.Collapsed;
         }
 
         public AddEditRecipe(Recipe _selectedRecipe)
         {
             InitializeComponent();
             selectedRecipe = _selectedRecipe;
-
             Cbx_servingsEdit.ItemsSource = GetComboboxOptions("servings");
             Cbx_minutesEdit.ItemsSource = GetComboboxOptions("minutes");
             Cbx_hoursEdit.ItemsSource = GetComboboxOptions("hours");
@@ -119,11 +119,13 @@ namespace WpfApp_SmartCookbook
         private void BrowseButton_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog open = new OpenFileDialog();
+            open.Multiselect = false;
+            open.DefaultExt = @".jpg";
+            open.Filter = @"Image files (*.jpg, *.jpeg, *.png) | *.jpg; *.jpeg; *.png";
             Nullable<bool> result = open.ShowDialog();
             if (result == true)
             {
                 Tbx_image.Text = open.FileName;
-                //FileNameTextBox.Text = System.IO.File.ReadAllText(open.FileName);
             }
         }
 
@@ -145,13 +147,14 @@ namespace WpfApp_SmartCookbook
             var listIngredients = MyStorage.ReadXml<List<Ingredient>>("IngredientData.xml");
             var ingredients = new List<Ingredient>();
 
-            //initial load 
             var ingredientListBegin = (from n in listIngredients
                                        where n.name.ToLower().StartsWith(text.ToLower())
                                        select n.name).ToList();
             var ingredientListContain = (from n in listIngredients
                                          where n.name.ToLower().Contains(text.ToLower())
                                          select n.name).ToList();
+            ingredientListBegin.Sort();
+            ingredientListContain.Sort();
             ingredientListBegin.AddRange(ingredientListContain);
             var ingredientList = ingredientListBegin.Distinct().ToList();
             foreach (var ingAdded in recipeIngredients)
@@ -161,7 +164,6 @@ namespace WpfApp_SmartCookbook
             }
             if (ingredientList.Count() > 0)
             {
-                //ingredientList.Sort();
                 Lbx_ingredient.ItemsSource = ingredientList.Take(5);
             }
             else
@@ -184,7 +186,6 @@ namespace WpfApp_SmartCookbook
                 }
                 else if (Lbx_ingredient.ItemsSource == null && Tbx_ingredientName.Text.Length >= 4)
                 {
-                    //Tbk_messageInvalid.Visibility = Visibility.Visible;
                     MessageBox.Show("Please enter a valid ingredient!", ":|", MessageBoxButton.OK, MessageBoxImage.Error);
                     Tbx_ingredientName.Text = "";
                 }
@@ -242,7 +243,6 @@ namespace WpfApp_SmartCookbook
                         else
                         {
                             var measure = Cbx_measure.SelectedValue == null ? "" : Cbx_measure.SelectedValue.ToString();
-                            //var converted = ConvertToKilos(quantity, measure);
                             if (measure == Measurement.gram || measure == Measurement.ml)
                             {
                                 var converted = ConvertToKilos(quantity, measure);
@@ -263,10 +263,8 @@ namespace WpfApp_SmartCookbook
                                 ingredientType = ing.type
                             };
                             recipeIngredients.Add(ingredient);
-                            //Lbx_ingredients.Visibility = Visibility.Visible;
                             Sp_Lbx_ingredients.Visibility = Visibility.Visible;
                             Lbx_ingredients.ItemsSource = recipeIngredients;
-                            //Lbx_ingredients.Items.Add(ingredient);
                             Lbx_ingredients.SelectedItem = ingredient;
                             Lbx_ingredients.ScrollIntoView(ingredient);
                             Tbx_quantity.Text = "";
@@ -279,7 +277,7 @@ namespace WpfApp_SmartCookbook
                 }
                 else
                 {
-                    MessageBox.Show("Please enter an ingredient!", ":|", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show("Please enter a valid ingredient!", ":|", MessageBoxButton.OK, MessageBoxImage.Error);
                     Tbx_ingredientName.Focus();
                     return;
                 }
@@ -421,6 +419,29 @@ namespace WpfApp_SmartCookbook
             {
                 if (Tbx_recipeName.Text != "")
                 {
+                    string imagePath = Tbx_image.Text;
+                    string destPath = imagePath;
+                    if (imagePath != "")
+                    {
+                        string[] parts = imagePath.Split('\\');
+                        if (parts[0] != "")
+                        {
+                            string imageName = parts[parts.Length - 1];
+
+                            destPath = @"\Images\" + imageName;
+                            string currentDirectory = System.Environment.CurrentDirectory;
+                            if (currentDirectory.EndsWith("\\bin\\Debug"))
+                            {
+                                int index = currentDirectory.IndexOf("\\bin\\Debug");
+                                currentDirectory = currentDirectory.Substring(0, index);
+                            }
+                            File.Copy(imagePath, currentDirectory + destPath, true);
+                        }
+                        else
+                        {
+                            destPath = imagePath;
+                        }
+                    }
                     if (!isEdit)
                     {
                         var id = recipes.Max(m => m.id);
@@ -435,7 +456,8 @@ namespace WpfApp_SmartCookbook
                             servings = Cbx_servings.SelectedValue.ToString(),
                             instruction = Tbx_instructions.Text,
                             ingredients = recipeIngredients.ToList(),
-                            image = @"\Images\noimage.jpg"//Tbx_image.Text
+                            isFavorite = Cbx_markFavorite.IsChecked.GetValueOrDefault(),
+                            image = imagePath == "" ? @"\Images\noimage.jpg" : destPath
                         });
                         var recipeList = recipes.ToList();
                         MyStorage.WriteXml<List<Recipe>>(recipeList, "InputData.xml");
@@ -448,7 +470,9 @@ namespace WpfApp_SmartCookbook
                                       where n.id == Convert.ToInt32(selectedRecipe.id)
                                       select n).FirstOrDefault();
                         selectedRecipe.ingredients = recipeIngredients.ToList();
-                        recipe = selectedRecipe;
+                        selectedRecipe.image = destPath;
+                        listInput.Remove(recipe);
+                        listInput.Add(selectedRecipe);
                         MyStorage.WriteXml<List<Recipe>>(listInput, "InputData.xml");
                     }
                     return 1;

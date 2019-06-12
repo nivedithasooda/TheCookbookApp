@@ -15,7 +15,7 @@
         <ScrollViewer VerticalScrollBarVisibility="Auto">
         <StackPanel Orientation="Vertical" Margin="0,0,0,0">
             <StackPanel Orientation="Vertical" Background="LightBlue">
-                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="The Cookbook App" VerticalAlignment="Top" FontWeight="Bold" FontSize="15" Margin="30,20,0,0"/>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="The Cookbook App" VerticalAlignment="Top" FontWeight="Bold" FontSize="20" Margin="30,20,0,0"/>
             </StackPanel>
             <ScrollViewer VerticalScrollBarVisibility="Auto">
                 <StackPanel Height="650" CanVerticallyScroll="True">
@@ -57,7 +57,7 @@
                                     </StackPanel>
                                     <StackPanel Orientation="Horizontal" Margin="1,5,0,5">
                                         <TextBlock TextWrapping="Wrap" Text="Mark as favorite" Margin="0,0,34,0"/>
-                                        <CheckBox Width="100" x:Name="Tbx_markFavorite" IsChecked="{Binding Path=isFavorite}"/>
+                                        <CheckBox Width="100" x:Name="Cbx_markFavorite" IsChecked="{Binding Path=isFavorite}"/>
                                     </StackPanel>
                                 </StackPanel>
                             <StackPanel Margin="20,0,10,0" Orientation="Vertical">

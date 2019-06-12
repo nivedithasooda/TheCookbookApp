@@ -29,7 +29,7 @@ namespace WpfApp_SmartCookbook
             //CreateXMLData();
         }
 
-        private List<Recipe> GetRecipes()
+        private void GetRecipes()
         {
             var ingredient1 = "";
             var ingredient2 = "";
@@ -49,8 +49,9 @@ namespace WpfApp_SmartCookbook
             var recipes = new List<Recipe>();
 
             //initial load
-            var recipeList = (from n in listInput where
-                              n.isDelete==false
+            var recipeList = (from n in listInput
+                              where
+          n.isDelete == false
                               select n).Take(20).ToList();
 
             //filter by ingredients
@@ -93,6 +94,7 @@ namespace WpfApp_SmartCookbook
             if (recipes.Count > 0)
             {
                 recipes = recipes.OrderBy(r => r.name).ToList();
+                var observableRecipe = new ObservableCollection<Recipe>(recipes);
                 Lbx_Items_Recipes.Visibility = Visibility.Visible;
                 Lbx_Items_Recipes.ItemsSource = recipes;
                 Tbk_RecipeListEmpty.Visibility = Visibility.Collapsed;
@@ -105,9 +107,6 @@ namespace WpfApp_SmartCookbook
                 Tbk_RecipeListEmpty.Visibility = Visibility.Visible;
                 Tbk_recipeListTitle.Visibility = Visibility.Collapsed;
             }
-            var list = new List<Recipe>();
-
-            return list;
         }
 
         private void Lbx_Items_Recipes_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -177,7 +176,6 @@ namespace WpfApp_SmartCookbook
 
             if (ingredientList.Count() > 0)
             {
-                //ingredientList.Sort();
                 Lbx_ingredient.ItemsSource = ingredientList.Take(5);
                 //Tbx_ingredient.BorderBrush = Brushes.Black;
             }
@@ -221,8 +219,7 @@ namespace WpfApp_SmartCookbook
                 newBtn.Click += new RoutedEventHandler(Btn_Ingredient_Click);
                 newBtn.HorizontalAlignment = HorizontalAlignment.Left;
                 newBtn.VerticalContentAlignment = VerticalAlignment.Center;
-                newBtn.Margin = new Thickness(1);
-                newBtn.Margin = new Thickness(1);
+                newBtn.Margin = new Thickness(0, 5, 5, 0);
                 newBtn.ToolTip = "Click to remove the ingredient";
                 Sp_filterIngredients.Children.Add(newBtn);
                 GetRecipes();

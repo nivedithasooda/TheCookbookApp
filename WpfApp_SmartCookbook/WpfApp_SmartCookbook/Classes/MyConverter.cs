@@ -47,6 +47,23 @@ namespace WpfApp_SmartCookbook.Classes
         }
     }
 
+    public class PathToBaseDirectory : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            string currentDirectory = System.Environment.CurrentDirectory;
+            if (currentDirectory.EndsWith("\\bin\\Debug"))
+            {
+                int index = currentDirectory.IndexOf("\\bin\\Debug");
+                currentDirectory = currentDirectory.Substring(0, index);
+            }
+            return currentDirectory + value.ToString();
+        }
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            return "";
+        }
+    }
     //public class ComboTime2StringTooltip : IValueConverter
     //{
     //    public object Convert(object value, Type targetType, object parameter, CultureInfo culture)

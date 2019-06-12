@@ -5,12 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp_SmartCookbook.Classes"
         mc:Ignorable="d" IsVisibleChanged="Window_IsVisibleChanged"
-        Title="The Cookbook App" Height="650" Width="620">
+        Title="The Cookbook App" Height="650" Width="630">
     <Grid>
         <Grid.Resources>
             <local:Bool2String x:Key="star"></local:Bool2String>
-            <!--<BitmapImage x:Key="Star" UriSource="/Icons/star.png" />
-            <BitmapImage x:Key="StarEmpty" UriSource="/Icons/emptystar.png" />-->
+            <local:PathToBaseDirectory x:Key="imagePath"></local:PathToBaseDirectory>
             <local:Bool2StringTooltip x:Key="tooltipHeart"></local:Bool2StringTooltip>
         </Grid.Resources>
         <ScrollViewer VerticalScrollBarVisibility="Auto">
@@ -18,7 +17,7 @@
                 <!--What's cooking today Background="BlanchedAlmond"-->
             <!--<TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="What do you have in your kitchen today?" VerticalAlignment="Top" FontWeight="Bold" FontSize="15" Margin="0,20,0,0"/>-->
                     <StackPanel Orientation="Vertical" Background="LightBlue">
-                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="The Cookbook App" VerticalAlignment="Top" FontWeight="Bold" FontSize="15" Margin="30,20,0,0"/>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="The Cookbook App" VerticalAlignment="Top" FontWeight="Bold" FontSize="20" Margin="30,20,0,0"/>
             </StackPanel>
                 <StackPanel>
                     <Button Content="Add new recipe" Click="Button_Click" HorizontalAlignment="Right" VerticalAlignment="Top" Width="90" Margin="0,10,10,0" ToolTip="Click to add new recipe"/>
@@ -81,7 +80,7 @@
                                         <!--<Border>MouseDown="Image_MouseDown"-->
                                         <StackPanel Orientation="Vertical" Margin="10" Width="140">
                                             <TextBlock x:Name="Tbk_recipeId" TextWrapping="Wrap" Text="{Binding Path=id}" Visibility="Collapsed"/>
-                                            <Image Source="{Binding Path=image}" Height="100" Width="130" HorizontalAlignment="Left" ToolTip="Click to view recipe"></Image>
+                                            <Image Source="{Binding Path=image,Converter={StaticResource imagePath}}" Height="100" Width="130" HorizontalAlignment="Left" ToolTip="Click to view recipe"></Image>
                                             <StackPanel Orientation="Horizontal">
                                                 <TextBlock TextWrapping="Wrap" Text="{Binding Path=name}" FontSize="12" FontWeight="Bold" Width="100" HorizontalAlignment="Left" />
                                                 <TextBlock x:Name="Tbk_isFavorite" TextWrapping="Wrap" Text="{Binding Path=isFavorite,Converter={StaticResource star}}" ToolTip="{Binding Path=isFavorite,Converter={StaticResource tooltipHeart}}" MouseDown="StarImage_MouseDown" Foreground="Red" HorizontalAlignment="Right">

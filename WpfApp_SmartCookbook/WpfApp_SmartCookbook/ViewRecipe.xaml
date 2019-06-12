@@ -11,15 +11,14 @@
         Title="View Recipe" Height="650" Width="620">
     <Grid>
         <Grid.Resources>
-            <!--DataContext="{Binding Path=selectedRecipe}"-->
+            <local:PathToBaseDirectory x:Key="imagePath"></local:PathToBaseDirectory>
             <local:Bool2String x:Key="star"></local:Bool2String>
             <local:Bool2StringTooltip x:Key="tooltipHeart"></local:Bool2StringTooltip>
         </Grid.Resources>
         <StackPanel Orientation="Vertical">
             <StackPanel Orientation="Vertical" Background="LightBlue">
-                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="The Cookbook App" VerticalAlignment="Top" FontWeight="Bold" FontSize="15" Margin="30,20,0,0"/>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="The Cookbook App" VerticalAlignment="Top" FontWeight="Bold" FontSize="20" Margin="30,20,0,0"/>
             </StackPanel>
-            <!--<Button Content="Back to list" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Margin="20,10,400,0" Click="Btn_Back_Click" />-->
             <StackPanel Orientation="Horizontal">
                 <TextBlock TextWrapping="Wrap" Text="View Recipe" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,15,380,10" FontSize="12">
                     <!--<TextBlock.TextDecorations>
@@ -39,7 +38,9 @@
                         </TextBlock>
                         <!--<TextBlock TextWrapping="Wrap" Text="My Recipe" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" Background="#FF00FFC5" FontSize="12" ToolTip="Recipe added by you"/> MouseDown="StarImage_MouseDown"-->
                     </StackPanel>
-                    <TextBlock TextWrapping="Wrap" x:Name="Tbk_Description" Text="{Binding Path=description}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,5,0,10" FontSize="14"/>
+                    <ScrollViewer VerticalScrollBarVisibility="Auto" MaxHeight="80">
+                        <TextBlock TextWrapping="Wrap" x:Name="Tbk_Description" Text="{Binding Path=description}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,5,0,10" FontSize="14"/>
+                    </ScrollViewer>
                     <TextBlock TextWrapping="Wrap" Text="Recipe Specifications :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0" FontSize="13">
                         <!--<TextBlock.TextDecorations>
                             <TextDecoration PenOffset="1"/>
@@ -64,7 +65,7 @@
                     <!--</StackPanel>-->
                     <!--<Border BorderBrush="Gray" CornerRadius="9" Width="250"
                 Padding="1" BorderThickness="0.5">-->
-                    <Image Source="{Binding Path=image}" Height="200" Width="310" ToolTip="Suggested garnishing"/>
+                    <Image Source="{Binding Path=image,Converter={StaticResource imagePath}}" Height="200" Width="310" ToolTip="Suggested garnishing"/>
                     <!--</Border>-->
                 </StackPanel>
             </StackPanel>
