@@ -1,0 +1,279 @@
+<?xml version="1.0"?>
+<ArrayOfRecipe xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Recipe>
+    <id>1</id>
+    <name>Potato curry</name>
+    <description>A simple and easy-to-make potato curry recipe.</description>
+    <timeRequiredHours>0</timeRequiredHours>
+    <timeRequiredMinutes>30</timeRequiredMinutes>
+    <servings>4</servings>
+    <isFavorite>false</isFavorite>
+    <isMyRecipe>false</isMyRecipe>
+    <image>Images\easy-potato-curry-1.jpg</image>
+    <instruction>1. Add the coconut oil to large skillet on medium heat.\n2. Add diced onion and cook until it starts turning translucent, about 5 minutes.\n3. Add coconut milk, diced tomatoes and all spices. Stir to combine.\n4. Bring to a low simmer and add potatoes.\n5. Cover and let simmer on low/medium until potatoes are softened, 10 - 15 minutes.\n6. Stir again and serve.
+	</instruction>
+    <ingredients>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>1</ingredientId>
+        <quantity>250</quantity>
+        <measure>gram(s)</measure>
+        <ingredientName>Potato(es)</ingredientName>
+        <ingredientType>solid</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>2</ingredientId>
+        <quantity>1</quantity>
+        <measure>tablespoon(s)</measure>
+        <ingredientName>Coconut oil</ingredientName>
+        <ingredientType>cream</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>3</ingredientId>
+        <quantity>200</quantity>
+        <measure>gram(s)</measure>
+        <ingredientName>Onion(s)</ingredientName>
+        <ingredientType>solid</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>4</ingredientId>
+        <quantity>200</quantity>
+        <measure>gram(s)</measure>
+        <ingredientName>Tomato(es)</ingredientName>
+        <ingredientType>solid</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>5</ingredientId>
+        <quantity>200</quantity>
+        <measure>ml</measure>
+        <ingredientName>Coconut milk</ingredientName>
+        <ingredientType>liquid</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>6</ingredientId>
+        <quantity>1</quantity>
+        <measure>teaspoon(s)</measure>
+        <ingredientName>Curry powder</ingredientName>
+        <ingredientType>spice</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>7</ingredientId>
+        <quantity>1</quantity>
+        <measure>teaspoon(s)</measure>
+        <ingredientName>Turmeric powder</ingredientName>
+        <ingredientType>spice</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>8</ingredientId>
+        <quantity>1</quantity>
+        <measure>teaspoon(s)</measure>
+        <ingredientName>Salt</ingredientName>
+        <ingredientType>spice</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>9</ingredientId>
+        <quantity>1</quantity>
+        <measure>teaspoon(s)</measure>
+        <ingredientName>Chilli powder</ingredientName>
+        <ingredientType>spice</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>10</ingredientId>
+        <quantity>1</quantity>
+        <measure>teaspoon(s)</measure>
+        <ingredientName>Garlic powder</ingredientName>
+        <ingredientType>spice</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>11</ingredientId>
+        <quantity>1</quantity>
+        <measure>teaspoon(s)</measure>
+        <ingredientName>Ginger powder</ingredientName>
+        <ingredientType>spice</ingredientType>
+      </RecipeIngredient>
+    </ingredients>
+  </Recipe>
+  <Recipe>
+    <id>2</id>
+    <name>Roasted potatoes</name>
+    <description>A side dish that goes along with roasted chicken, lamb chops or almost anything!</description>
+    <timeRequiredHours>0</timeRequiredHours>
+    <timeRequiredMinutes>30</timeRequiredMinutes>
+    <servings>4</servings>
+    <isFavorite>true</isFavorite>
+    <isMyRecipe>false</isMyRecipe>
+    <image>Images\roastpotato.jpg</image>
+    <instruction>1. Cut the potatoes into wedges or the way you like.\n2. Heat oven to 425°F. In an ungreased 15x10x1-inch pan, mix all ingredients; spread evenly.\n3. Roast uncovered for 25 to 30 minutes, stirring occasionally, until potatoes are tender and browned.
+	</instruction>
+    <ingredients>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>1</ingredientId>
+        <quantity>250</quantity>
+        <measure>gram(s)</measure>
+        <ingredientName>Potato(es)</ingredientName>
+        <ingredientType>solid</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>2</ingredientId>
+        <quantity>2</quantity>
+        <measure>tablespoon(s)</measure>
+        <ingredientName>Olive oil</ingredientName>
+        <ingredientType>cream</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>3</ingredientId>
+        <quantity>1</quantity>
+        <measure>teaspoon(s)</measure>
+        <ingredientName>Rosemary leaves</ingredientName>
+        <ingredientType>spice</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>4</ingredientId>
+        <quantity>0.5</quantity>
+        <measure>teaspoon(s)</measure>
+        <ingredientName>Salt</ingredientName>
+        <ingredientType>spice</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>5</ingredientId>
+        <quantity>0.5</quantity>
+        <measure>teaspoon(s)</measure>
+        <ingredientName>Pepper powder</ingredientName>
+        <ingredientType>spice</ingredientType>
+      </RecipeIngredient>
+    </ingredients>
+  </Recipe>
+  <Recipe>
+    <id>3</id>
+    <name>Tomato chutney</name>
+    <description>A side dish that goes along with dosa, idli or roti.</description>
+    <timeRequiredHours>0</timeRequiredHours>
+    <timeRequiredMinutes>10</timeRequiredMinutes>
+    <servings>4</servings>
+    <isFavorite>false</isFavorite>
+    <isMyRecipe>false</isMyRecipe>
+    <image>Images\tomatochutney.jpg</image>
+    <instruction>1. Heat oil in a pan, add the spilt black gram(s) and sauté on a low flame until they start turning brown.\n2. Add the chopped tomatoes and salt stir them.\n3. After about a minute, add the chilli and ginger powders and cook the mixture for 6-7 minutes until the tomatoes are soft and mushy.\n4. Turn off the heat and let the mixture cool down.\n5. Once the mixture cools down, transfer the contents into a blender, add water and grind it to a smooth paste.
+</instruction>
+    <ingredients>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>1</ingredientId>
+        <quantity>350</quantity>
+        <measure>gram(s)</measure>
+        <ingredientName>Tomato(es)</ingredientName>
+        <ingredientType>solid</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>2</ingredientId>
+        <quantity>2</quantity>
+        <measure>tablespoon(s)</measure>
+        <ingredientName>Coconut oil</ingredientName>
+        <ingredientType>cream</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>3</ingredientId>
+        <quantity>2</quantity>
+        <measure>teaspoon(s)</measure>
+        <ingredientName>Ginger powder</ingredientName>
+        <ingredientType>spice</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>4</ingredientId>
+        <quantity>1</quantity>
+        <measure>teaspoon(s)</measure>
+        <ingredientName>Salt</ingredientName>
+        <ingredientType>spice</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>5</ingredientId>
+        <quantity>1</quantity>
+        <measure>teaspoon(s)</measure>
+        <ingredientName>Chilli powder</ingredientName>
+        <ingredientType>spice</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>6</ingredientId>
+        <quantity>50</quantity>
+        <measure>ml</measure>
+        <ingredientName>Water</ingredientName>
+        <ingredientType>liquid</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>7</ingredientId>
+        <quantity>50</quantity>
+        <measure>gram(s)</measure>
+        <ingredientName>Split black gram</ingredientName>
+        <ingredientType>solid</ingredientType>
+      </RecipeIngredient>
+    </ingredients>
+  </Recipe>
+  <Recipe>
+    <id>4</id>
+    <name>Scrambled eggs</name>
+    <description>A simple and quick breakfast recipe.</description>
+    <timeRequiredHours>0</timeRequiredHours>
+    <timeRequiredMinutes>10</timeRequiredMinutes>
+    <servings>2</servings>
+    <isFavorite>false</isFavorite>
+    <isMyRecipe>false</isMyRecipe>
+    <image>Images\scrambledeggs.jpg</image>
+    <instruction>1. Add the olive oil to skillet on medium heat.\n2. Add the beaten eggs and saute for about 3 minutes.\n3. Add the spices. Stir to combine, serve.
+	</instruction>
+    <ingredients>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>18</ingredientId>
+        <quantity>2</quantity>
+        <measure />
+        <ingredientName>Egg(s)</ingredientName>
+        <ingredientType>misc</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>2</ingredientId>
+        <quantity>2</quantity>
+        <measure>tablespoon(s)</measure>
+        <ingredientName>Olive oil</ingredientName>
+        <ingredientType>cream</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>4</ingredientId>
+        <quantity>0.5</quantity>
+        <measure>teaspoon(s)</measure>
+        <ingredientName>Salt</ingredientName>
+        <ingredientType>spice</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <recipeId>0</recipeId>
+        <ingredientId>5</ingredientId>
+        <quantity>0.5</quantity>
+        <measure>teaspoon(s)</measure>
+        <ingredientName>Pepper powder</ingredientName>
+        <ingredientType>spice</ingredientType>
+      </RecipeIngredient>
+    </ingredients>
+  </Recipe>
+</ArrayOfRecipe>

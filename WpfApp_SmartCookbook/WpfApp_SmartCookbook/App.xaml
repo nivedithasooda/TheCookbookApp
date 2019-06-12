@@ -1,0 +1,10 @@
+﻿<Application x:Class="WpfApp_SmartCookbook.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:WpfApp_SmartCookbook"
+             StartupUri="MainWindow.xaml">
+    <!-- MainWindow AddEditRecipe-->
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>

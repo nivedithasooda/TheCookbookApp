@@ -1,0 +1,180 @@
+﻿<Window x:Class="WpfApp_SmartCookbook.AddEditRecipe"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp_SmartCookbook.Classes"
+        mc:Ignorable="d" WindowStartupLocation="CenterOwner" Loaded="Window_Loaded"
+        Closing="Window_Closing"
+        Title="My Recipe" Height="650" Width="620">
+    <Grid>
+        <Grid.Resources>
+            <!--<local:ComboServings2StringTooltip x:Key="serve"></local:ComboServings2StringTooltip>
+            <local:ComboTime2StringTooltip x:Key="time"></local:ComboTime2StringTooltip>-->
+        </Grid.Resources>
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Orientation="Vertical" Margin="0,0,0,0">
+            <StackPanel Orientation="Vertical" Background="LightBlue">
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="The Cookbook App" VerticalAlignment="Top" FontWeight="Bold" FontSize="15" Margin="30,20,0,0"/>
+            </StackPanel>
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <StackPanel Height="650" CanVerticallyScroll="True">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock TextWrapping="Wrap" Text="Edit Recipe" x:Name="Tbx_EditTitle" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,370,20" FontSize="14">
+                        </TextBlock>
+                        <TextBlock TextWrapping="Wrap" Text="Add a new Recipe" x:Name="Tbx_AddTitle" Visibility="Collapsed" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,370,20" FontSize="14">
+                            <!--<TextBlock.TextDecorations>
+                                <TextDecoration PenOffset="1"/>
+                            </TextBlock.TextDecorations>-->
+                        </TextBlock>
+                        <!--<Button Content="Delete" Width="50" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,10,0" Visibility="Visible"/>-->
+                    </StackPanel>
+                    <!--<StackPanel Orientation="Horizontal">-->
+                    <StackPanel Margin="10,5,0,0" Orientation="Vertical">
+                        <StackPanel Orientation="Horizontal">
+                            <StackPanel Margin="0,0,0,0" Orientation="Vertical">
+                                <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                                    <TextBlock TextWrapping="Wrap" Text="Recipe name" Width="120"/>
+                                    <TextBox TextWrapping="Wrap" x:Name="Tbx_recipeName" Text="{Binding Path=name}" Width="180" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                                    <TextBlock TextWrapping="Wrap" Text="Servings" HorizontalAlignment="Left" VerticalAlignment="Top"  Width="120"/>
+                                    <!--<TextBox TextWrapping="Wrap" x:Name="Tbx_servings" Text="" HorizontalAlignment="Left" Width="60" VerticalAlignment="Top"/>-->
+                                    <ComboBox x:Name="Cbx_servings" Height="20" Width="45" VerticalAlignment="Top" Padding="10,1,0,0" Visibility="Collapsed"/>
+                                    <ComboBox x:Name="Cbx_servingsEdit" Height="20" Width="45" SelectedItem="{Binding Path=servings}" VerticalAlignment="Top" Padding="10,1,0,0"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
+                                    <TextBlock TextWrapping="Wrap" Text="Time required" Width="120"/>
+                                    <ComboBox x:Name="Cbx_hours" Height="20" Width="45" VerticalAlignment="Top" Padding="10,1,0,0" Visibility="Collapsed" />
+                                    <ComboBox x:Name="Cbx_hoursEdit" Height="20" Width="45" SelectedValue="{Binding Path=timeRequiredHours}" VerticalAlignment="Top" Padding="10,1,0,0"/>
+                                    <!--<TextBlock TextWrapping="Wrap" x:Name="Tbk_timeRequiredHours" Text="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,0"/>-->
+                                    <TextBlock TextWrapping="Wrap" Text="hour(s)" Margin="5,0,10,0" VerticalAlignment="Top"/>
+                                    <!--<TextBlock TextWrapping="Wrap" x:Name="Tbk_timeRequiredMinutes" Text="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,0"/>-->
+                                    <ComboBox x:Name="Cbx_minutes" Height="20" Width="45" VerticalAlignment="Top" Padding="10,1,0,0" Visibility="Collapsed" />
+                                    <ComboBox x:Name="Cbx_minutesEdit" Height="20" Width="45" SelectedValue="{Binding Path=timeRequiredMinutes}" VerticalAlignment="Top" Padding="10,1,0,0"/>
+                                    <TextBlock TextWrapping="Wrap" Text="min(s)" Margin="5,0,0,0"/>
+
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="1,5,0,5">
+                                        <TextBlock TextWrapping="Wrap" Text="Mark as favorite" Margin="0,0,34,0"/>
+                                        <CheckBox Width="100" x:Name="Tbx_markFavorite" IsChecked="{Binding Path=isFavorite}"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            <StackPanel Margin="20,0,10,0" Orientation="Vertical">
+                                <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                                    <TextBlock TextWrapping="Wrap" Text="Description" />
+                                    <TextBox TextWrapping="Wrap" x:Name="Tbx_recipeDescription" Text="{Binding Path=description}" Width="180" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,0,0,0" Height="40" VerticalScrollBarVisibility="Auto"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="0,2,0,5">
+                                        <TextBlock TextWrapping="Wrap" Text="Recipe Image" Width="60" />
+                                        <StackPanel Orientation="Vertical">
+                                            <TextBox HorizontalAlignment="Left" Margin="5,0,0,0" TextWrapping="Wrap"   ToolTip="{Binding Path=image}" Text="{Binding Path=image}" VerticalAlignment="Top" Width="180" Name="Tbx_image" IsEnabled="false" MaxHeight="40" />
+                            <Button x:Name="BrowseButton" Content="Browse" HorizontalAlignment="Left"   
+                Margin="5,5,0,0" VerticalAlignment="Top" Width="45" Height="18" Click="BrowseButton_Click" Padding="0,0,0,0"/>
+                                </StackPanel>
+                                    </StackPanel>
+                                </StackPanel>
+                        </StackPanel>
+                        
+                        <StackPanel Orientation="Horizontal">
+                            <StackPanel x:Name="Sp_Add" Orientation="Vertical">
+
+                                <TextBlock TextWrapping="Wrap" Text="Ingredients :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,5" FontSize="13">
+                                </TextBlock>
+                                <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                                    <TextBlock TextWrapping="Wrap" Text="Enter the ingredient" Width="120"/>
+                                    <StackPanel Orientation="Vertical">
+                                        <TextBox TextWrapping="Wrap" x:Name="Tbx_ingredientName" Text="" Width="180" HorizontalAlignment="Left" TextChanged="Tbx_ingredient_TextChanged" KeyDown="Tbx_ingredient_KeyDown" VerticalAlignment="Top" Margin="0,0,0,0"/>
+                                        <ListBox x:Name="Lbx_ingredient" Width="180"  Visibility="Collapsed" SelectionChanged="Lbx_ingredient_SelectionChanged"/>
+                                    </StackPanel>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                                    <TextBlock TextWrapping="Wrap" Text="Quantity" Width="120"/>
+                                    <TextBox TextWrapping="Wrap" x:Name="Tbx_quantity" Text="" Width="40" HorizontalAlignment="Left" MaxLength="5" VerticalAlignment="Center" Margin="0,0,5,0" KeyDown="Tbx_quantity_KeyDown"/>
+                                    <ComboBox x:Name="Cbx_measure" SelectedItem="" Width="97" VerticalAlignment="Top" Padding="2,1" Visibility="Collapsed"/>
+                                </StackPanel>
+                                <!--<StackPanel Orientation="Horizontal" Margin="0,0,0,5"> Padding="0,2"-->
+                                <!--<TextBlock TextWrapping="Wrap" Text="Select measure" Width="120"/>-->
+
+                                <!--<TextBox TextWrapping="Wrap" x:Name="Tbk_measure" Text="" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,0"  Visibility="Collapsed"/>-->
+                                <!--</StackPanel>-->
+                                <!--<StackPanel Orientation="Horizontal" Margin="120,0,0,10">-->
+                                <StackPanel Orientation="Horizontal">
+                                    <Button x:Name="Btn_add" Content="Add" HorizontalAlignment="Left"   
+                          Margin="120,5,0,10" VerticalAlignment="Top" Width="40" Click="AddButton_Click"/>
+                                    <!--<Button x:Name="Btn_delete" Content="Delete" HorizontalAlignment="Left"   
+                Margin="5,5,0,0" VerticalAlignment="Top" Width="40" Click="DeleteButton_Click" Visibility="Collapsed"/>-->
+                                </StackPanel>
+
+                                <!--</StackPanel>-->
+                            </StackPanel>
+                            <StackPanel x:Name="Sp_forEdit" Orientation="Vertical" DataContext="{Binding ElementName=Lbx_ingredients, Path=SelectedItem}"  Visibility="Collapsed">
+
+                                <TextBlock TextWrapping="Wrap" Text="Ingredients :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,15,0,5" FontSize="13">
+                                </TextBlock>
+                                <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                                    <TextBlock TextWrapping="Wrap" Text="Ingredient name" Width="120"/>
+                                    <StackPanel Orientation="Vertical">
+                                        <TextBox TextWrapping="Wrap" x:Name="Tbx_ingredientNameEdit" Text="{Binding ingredientName}" Width="180" HorizontalAlignment="Left" TextChanged="Tbx_ingredient_TextChanged" KeyDown="Tbx_ingredient_KeyDown" VerticalAlignment="Top" IsEnabled="false"/>
+                                        <ListBox x:Name="Lbx_ingredientEdit" Width="160"  Visibility="Collapsed" SelectionChanged="Lbx_ingredient_SelectionChanged"/>
+                                    </StackPanel>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                                    <TextBlock TextWrapping="Wrap" Text="Quantity" Width="120"/>
+                                    <TextBox TextWrapping="Wrap" x:Name="Tbx_quantityEdit" Text="{Binding quantity}" Width="40" HorizontalAlignment="Left" MaxLength="5" VerticalAlignment="Center" Margin="0,0,10,0" KeyUp="Tbx_quantityEdit_KeyUp"/>
+                                    <ComboBox x:Name="Cbx_measureEdit" SelectedItem="{Binding measure}" Width="97" VerticalAlignment="Top" Padding="2,1" SelectionChanged="Cbx_measureEdit_SelectionChanged"/>
+                                </StackPanel>
+                                <!--<StackPanel Orientation="Horizontal" Margin="0,0,0,5"> Padding="0,2"-->
+                                <!--<TextBlock TextWrapping="Wrap" Text="Select measure" Width="120"/>-->
+
+                                <!--<TextBox TextWrapping="Wrap" x:Name="Tbk_measure" Text="" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,0"  Visibility="Collapsed"/>-->
+                                <!--</StackPanel>-->
+                                <!--<StackPanel Orientation="Horizontal" Margin="120,0,0,10">-->
+                                <StackPanel Orientation="Horizontal">
+                                    <Button x:Name="Btn_update" Content="Add" HorizontalAlignment="Left"   
+                          Margin="120,0,0,10" VerticalAlignment="Top" Width="40" Click="UpdateButton_Click"/>
+                                    <Button x:Name="Btn_deleteEdit" Content="Delete" HorizontalAlignment="Left"   
+                Margin="10,0,0,0" VerticalAlignment="Top" Width="40" Click="DeleteButton_Click"/>
+                                </StackPanel>
+
+                                <!--</StackPanel>SelectionChanged="Lbx_ingredients_Selected"-->
+                            </StackPanel>
+                            <StackPanel Orientation="Vertical" Margin="20,20,10,0" x:Name="Sp_Lbx_ingredients" Visibility="Collapsed" >
+                                <ListBox x:Name="Lbx_ingredients" Width="245" HorizontalAlignment="Right" VerticalAlignment="Top" Height="90"  MouseUp="Lbx_ingredients_MouseUp">
+                                    <ListBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <TextBlock>
+                                        <Run Text="{Binding ingredientName}"></Run>
+                                        <Run Text=" "/>
+                                        <Run Text="{Binding quantity}"></Run>
+                                        <Run Text=" "/>
+                                        <Run Text="{Binding measure}"></Run>
+                                            </TextBlock>
+                                        </DataTemplate>
+                                    </ListBox.ItemTemplate>
+                                </ListBox>
+                                <TextBlock TextWrapping="Wrap" Text="(Note: 1000 ml = 1 Litre, 1000 grams = 1 Kilogram)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,5,0,5" FontSize="9" Foreground="Gray">
+                                </TextBlock>
+                            </StackPanel>
+                        </StackPanel>
+                        <StackPanel Orientation="Vertical" Margin="0,20,0,0">
+                            <TextBlock TextWrapping="Wrap" Text="Instructions :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,2" FontSize="13">
+                            </TextBlock>
+                            <TextBox TextWrapping="Wrap" x:Name="Tbx_instructions" Text="{Binding instruction}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,10" Height="200" Width="563" VerticalScrollBarVisibility="Auto" AcceptsReturn="True">
+                            </TextBox>
+                            <Button x:Name="SaveButton" Content="Save Recipe" HorizontalAlignment="Left" Visibility="Collapsed"                               VerticalAlignment="Top" Click="SaveButton_Click"/>
+                            <StackPanel x:Name="Sp_button" Margin="0,0,0,0" Orientation="Horizontal">
+                                <Button x:Name="UpdateRecipeButton" Content="Update Recipe" HorizontalAlignment="Left"   
+                                VerticalAlignment="Top" Click="UpdateRecipeButton_Click"/>
+                                <Button x:Name="DeleteRecipeButton" Margin="30,0,0,0" Content="Delete Recipe" HorizontalAlignment="Left"   
+                                VerticalAlignment="Top" Click="DeleteRecipeButton_Click"/>
+                            </StackPanel>
+                        </StackPanel>
+                        <!--</StackPanel>-->
+                    </StackPanel>
+                </StackPanel>
+            </ScrollViewer>
+        </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>

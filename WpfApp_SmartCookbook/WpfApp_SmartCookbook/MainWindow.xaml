@@ -1,0 +1,110 @@
+﻿<Window x:Class="WpfApp_SmartCookbook.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp_SmartCookbook.Classes"
+        mc:Ignorable="d" IsVisibleChanged="Window_IsVisibleChanged"
+        Title="The Cookbook App" Height="650" Width="620">
+    <Grid>
+        <Grid.Resources>
+            <local:Bool2String x:Key="star"></local:Bool2String>
+            <!--<BitmapImage x:Key="Star" UriSource="/Icons/star.png" />
+            <BitmapImage x:Key="StarEmpty" UriSource="/Icons/emptystar.png" />-->
+            <local:Bool2StringTooltip x:Key="tooltipHeart"></local:Bool2StringTooltip>
+        </Grid.Resources>
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <StackPanel Orientation="Vertical">
+                <!--What's cooking today Background="BlanchedAlmond"-->
+            <!--<TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="What do you have in your kitchen today?" VerticalAlignment="Top" FontWeight="Bold" FontSize="15" Margin="0,20,0,0"/>-->
+                    <StackPanel Orientation="Vertical" Background="LightBlue">
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="The Cookbook App" VerticalAlignment="Top" FontWeight="Bold" FontSize="15" Margin="30,20,0,0"/>
+            </StackPanel>
+                <StackPanel>
+                    <Button Content="Add new recipe" Click="Button_Click" HorizontalAlignment="Right" VerticalAlignment="Top" Width="90" Margin="0,10,10,0" ToolTip="Click to add new recipe"/>
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Search by ingredient(s) combination (maximum 3)" VerticalAlignment="Top" FontSize="12" Margin="30,10,0,0">
+                <!--<TextBlock.TextDecorations>
+                    <TextDecoration PenOffset="1"/>
+                </TextBlock.TextDecorations>-->
+                    </TextBlock>
+                    <StackPanel Orientation="Vertical">
+                        <Border BorderBrush="Gray" CornerRadius="6"
+                Padding="6" Margin="10,1,10,5" BorderThickness="0.5">
+                            <StackPanel Margin="0,12,0,0" Orientation="Vertical">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock TextWrapping="Wrap" Text="Enter the ingredient" HorizontalAlignment="Left" Width="140" VerticalAlignment="Top" Margin="12,0,0,0"/>
+                                    <StackPanel Margin="0,0,0,0" Orientation="Vertical">
+                                        <TextBox x:Name="Tbx_ingredient" TextWrapping="Wrap" Text="" HorizontalAlignment="Left" VerticalAlignment="Top" ToolTip="Enter the ingredients one at a time to browse recipes" Width="160" TextChanged="Tbx_ingredient_TextChanged" KeyDown="Tbx_ingredient_KeyDown" PreviewKeyDown="Tbx_ingredient_PreviewKeyDown"/>
+                                        <TextBlock x:Name="Tbk_messageInvalid" TextWrapping="Wrap" Text="Please enter a valid ingredient!" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Visibility="Collapsed"/>
+                                        <ListBox x:Name="Lbx_ingredient" Width="160"  Visibility="Collapsed" SelectionChanged="Lbx_ingredient_SelectionChanged"/>
+                                    </StackPanel>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Margin="12,0,0,0">
+                                    <TextBlock TextWrapping="Wrap" Text="Finding recipes with :" x:Name="Tbk_findRecipesWith" Width="140" Visibility="Collapsed"/>
+                                    <StackPanel x:Name="Sp_filterIngredients" Orientation="Horizontal">
+                                        <!--<ListBox x:Name="Lbx_ingredient_filters" Width="160" />
+                            <Button Content="Remove" Width="90" HorizontalAlignment="Left"/>-->
+                                    </StackPanel>
+                                </StackPanel>
+                            </StackPanel>
+                        </Border>
+                        <StackPanel Orientation="Vertical" Margin="30,0,0,0">
+                            <StackPanel Margin="140,5,30,0" Orientation="Vertical">
+                                <CheckBox x:Name="Cbx_getFavorites" Content="Get favorites" Click="Cbx_getFavorites_Checked" Width="100" HorizontalAlignment="Left"/>
+                                <CheckBox x:Name="Cbx_getMyRecipes" Content="Get my recipes" Click="Cbx_getMyRecipes_Checked" Width="100" Margin="0,5,0,0" HorizontalAlignment="Left"/>
+                            </StackPanel>
+                            <StackPanel Margin="0,10,0,0" Orientation="Horizontal">
+                                <TextBlock TextWrapping="Wrap" Text="Search by recipe name" Width="140" />
+                                <TextBox x:Name="Tbx_filterName" TextWrapping="Wrap" Text="" Margin="0,0,30,0" HorizontalAlignment="Left" VerticalAlignment="Top" ToolTip="Enter the recipe name" Width="160" TextChanged="Tbx_filterName_TextChanged"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
+                    <Border CornerRadius="6"
+                BorderBrush="Gray"
+                BorderThickness="1"
+                Padding="8" Margin="10,20,10,20" VerticalAlignment="Center">
+                        <StackPanel Orientation="Vertical" OverridesDefaultStyle="True" >
+                            <TextBlock x:Name="Tbk_recipeListTitle" TextWrapping="Wrap" Text="List of recipes :" Margin="10,0,0,0" Width="185" HorizontalAlignment="Left"/>
+                            <TextBlock x:Name="Tbk_RecipeListEmpty" Text="No recipes found. Please filter by other options." Visibility="Collapsed" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="30,0,0,0"/>
+
+
+                            <ListBox x:Name="Lbx_Items_Recipes" SelectionChanged="Lbx_Items_Recipes_SelectionChanged" ItemsSource="{Binding Path=recipe}" Visibility="Collapsed" Margin="0" ScrollViewer.VerticalScrollBarVisibility="Auto" Height="320" ScrollViewer.HorizontalScrollBarVisibility="Disabled" >
+                                <ListBox.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <!--<ScrollViewer VerticalScrollBarVisibility="Auto" MaxHeight="300">-->
+                                        <WrapPanel Margin="15,10,10,10" Orientation="Horizontal" MaxWidth="550"/>
+                                        <!--</ScrollViewer>-->
+                                    </ItemsPanelTemplate>
+                                </ListBox.ItemsPanel>
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <!--<Border>MouseDown="Image_MouseDown"-->
+                                        <StackPanel Orientation="Vertical" Margin="10" Width="140">
+                                            <TextBlock x:Name="Tbk_recipeId" TextWrapping="Wrap" Text="{Binding Path=id}" Visibility="Collapsed"/>
+                                            <Image Source="{Binding Path=image}" Height="100" Width="130" HorizontalAlignment="Left" ToolTip="Click to view recipe"></Image>
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock TextWrapping="Wrap" Text="{Binding Path=name}" FontSize="12" FontWeight="Bold" Width="100" HorizontalAlignment="Left" />
+                                                <TextBlock x:Name="Tbk_isFavorite" TextWrapping="Wrap" Text="{Binding Path=isFavorite,Converter={StaticResource star}}" ToolTip="{Binding Path=isFavorite,Converter={StaticResource tooltipHeart}}" MouseDown="StarImage_MouseDown" Foreground="Red" HorizontalAlignment="Right">
+                                                </TextBlock>
+                                            </StackPanel>
+                                            <StackPanel Orientation="Horizontal" ToolTip="Time required to prepare the dish">
+                                                <TextBlock TextWrapping="Wrap" Text="Time : " FontSize="10" />
+                                                <TextBlock TextWrapping="Wrap" Text="" FontSize="11"><Run Text="{Binding Path=timeRequiredHours}"/>
+                                            <Run Text="hours" ToolTip="hours"/>
+                                            <Run Text="{Binding Path=timeRequiredMinutes}"/>
+                                        <Run Text="mins" ToolTip="minutes"/>
+                                                </TextBlock>
+                                            </StackPanel>
+                                        </StackPanel>
+                                        <!--</Border>-->
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+        </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>

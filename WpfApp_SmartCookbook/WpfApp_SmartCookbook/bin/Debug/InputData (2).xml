@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<ArrayOfRecipe xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Recipe>
+    <id>1</id>
+    <name>Potato curry</name>
+    <description>A simple and easy-to-make potato curry.</description>
+    <timeRequired>00:30 hrs</timeRequired>
+    <servings>4</servings>
+    <isFavorite>false</isFavorite>
+    <isMyRecipe>false</isMyRecipe>
+    <image>Images\easy-potato-curry-1.jpg</image>
+    <instruction>1.	Add the coconut oil to large skillet on medium heat. Add minced garlic.
+	2.	Once garlic is fragrant, add diced onion and cook until starting to turn translucent, about 5 minutes.
+	3.	Add coconut milk, diced tomatoes, ginger, maple syrup, and spices. Stir to combine.
+	4.	Bring to a low simmer and add potatoes.
+	5.	Cover and let simmer on low/medium until potatoes are softened, 10 - 15 minutes.
+	6.	Add frozen peas, stir, and let sit for 5 minutes.
+	7.	Stir again and serve.
+	</instruction>
+    <ingredients>
+      <RecipeIngredient>
+        <ingredientId>1</ingredientId>
+        <quantity>250</quantity>
+        <measure>gram(s)</measure>
+        <ingredientName>Potato</ingredientName>
+        <ingredientType>solid</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <ingredientId>2</ingredientId>
+        <quantity>1</quantity>
+        <measure>tablespoon(s)</measure>
+        <ingredientName>Coconut oil</ingredientName>
+        <ingredientType>cream</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <ingredientId>3</ingredientId>
+        <quantity>200</quantity>
+        <measure>gram(s)</measure>
+        <ingredientName>Onion(s)</ingredientName>
+        <ingredientType>solid</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <ingredientId>4</ingredientId>
+        <quantity>200</quantity>
+        <measure>gram(s)</measure>
+        <ingredientName>Tomato(s)</ingredientName>
+        <ingredientType>solid</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <ingredientId>5</ingredientId>
+        <quantity>200</quantity>
+        <measure>ml</measure>
+        <ingredientName>Coconut milk</ingredientName>
+        <ingredientType>solid</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <ingredientId>6</ingredientId>
+        <quantity>200</quantity>
+        <measure>ml</measure>
+        <ingredientName>Curry powder</ingredientName>
+        <ingredientType>spice</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <ingredientId>7</ingredientId>
+        <quantity>200</quantity>
+        <measure>ml</measure>
+        <ingredientName>Turmeric</ingredientName>
+        <ingredientType>spice</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <ingredientId>8</ingredientId>
+        <quantity>1</quantity>
+        <measure>teaspoon(s)</measure>
+        <ingredientName>Salt</ingredientName>
+        <ingredientType>spice</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <ingredientId>9</ingredientId>
+        <quantity>1</quantity>
+        <measure>teaspoon(s)</measure>
+        <ingredientName>Chilli powder</ingredientName>
+        <ingredientType>spice</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <ingredientId>10</ingredientId>
+        <quantity>1</quantity>
+        <measure>teaspoon(s)</measure>
+        <ingredientName>Curry powder</ingredientName>
+        <ingredientType>spice</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <ingredientId>11</ingredientId>
+        <quantity>1</quantity>
+        <measure>teaspoon(s)</measure>
+        <ingredientName>Garlic powder</ingredientName>
+        <ingredientType>spice</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <ingredientId>12</ingredientId>
+        <quantity>1</quantity>
+        <measure>teaspoon(s)</measure>
+        <ingredientName>Ginger powder</ingredientName>
+        <ingredientType>spice</ingredientType>
+      </RecipeIngredient>
+    </ingredients>
+  </Recipe>
+  <Recipe>
+    <id>2</id>
+    <name>Roasted potatoes</name>
+    <description>A side dish that goes along with roasted chicken, lamb chops or almost anything!</description>
+    <timeRequired>00:30 hrs</timeRequired>
+    <servings>4</servings>
+    <isFavorite>true</isFavorite>
+    <isMyRecipe>false</isMyRecipe>
+    <image>Images\roastpotato.jpg</image>
+    <instruction>1.  Cut the potatoes into wedges or the way you like. 
+	2. 	Heat oven to 425°F. In an ungreased 15x10x1-inch pan, mix all ingredients; spread evenly.
+	3.  Roast uncovered 25 to 35 minutes, stirring occasionally, until potatoes are tender and browned.
+	</instruction>
+    <ingredients>
+      <RecipeIngredient>
+        <ingredientId>1</ingredientId>
+        <quantity>250</quantity>
+        <measure>gram(s)</measure>
+        <ingredientName>Potato</ingredientName>
+        <ingredientType>solid</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <ingredientId>2</ingredientId>
+        <quantity>2</quantity>
+        <measure>tablespoon(s)</measure>
+        <ingredientName>Vegetable or olive oil</ingredientName>
+        <ingredientType>cream</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <ingredientId>3</ingredientId>
+        <quantity>1</quantity>
+        <measure>teaspoon(s)</measure>
+        <ingredientName>Rosemary leaves</ingredientName>
+        <ingredientType>spice</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <ingredientId>4</ingredientId>
+        <quantity>0.5</quantity>
+        <measure>teaspoon(s)</measure>
+        <ingredientName>Salt</ingredientName>
+        <ingredientType>spice</ingredientType>
+      </RecipeIngredient>
+      <RecipeIngredient>
+        <ingredientId>5</ingredientId>
+        <quantity>0.5</quantity>
+        <measure>teaspoon(s)</measure>
+        <ingredientName>Pepper powder</ingredientName>
+        <ingredientType>spice</ingredientType>
+      </RecipeIngredient>
+    </ingredients>
+  </Recipe>
+</ArrayOfRecipe>

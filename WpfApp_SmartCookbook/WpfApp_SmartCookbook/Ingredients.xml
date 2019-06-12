@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Ingredients>
+  <Ingredient>
+    <id>1</id>
+    <name>Apple</name>
+    <type>Fruit</type>
+  </Ingredient>
+</Ingredients>

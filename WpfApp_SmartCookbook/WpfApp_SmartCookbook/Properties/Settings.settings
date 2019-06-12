@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="WpfApp_SmartCookbook.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="FilledHeart" Type="System.String" Scope="User">
+      <Value Profile="(Default)">🖤</Value>
+    </Setting>
+    <Setting Name="EmptyHeart" Type="System.String" Scope="User">
+      <Value Profile="(Default)">❤</Value>
+    </Setting>
+    <Setting Name="Markedfavorite" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Marked as favorite</Value>
+    </Setting>
+    <Setting Name="Markfavorite" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Mark as favorite</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

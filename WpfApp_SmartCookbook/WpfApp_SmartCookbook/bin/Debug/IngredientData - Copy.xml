@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<ArrayOfIngredient xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Ingredient>
+    <id>1</id>
+    <name>Potato</name>
+    <type>solid</type>
+  </Ingredient>
+  <Ingredient>
+    <id>2</id>
+    <name>Coconut oil</name>
+    <type>creamy</type>
+  </Ingredient>
+  <Ingredient>
+    <id>3</id>
+    <name>Onion</name>
+    <type>solid</type>
+  </Ingredient>
+  <Ingredient>
+    <id>4</id>
+    <name>Tomato</name>
+    <type>solid</type>
+  </Ingredient>
+  <Ingredient>
+    <id>5</id>
+    <name>Rosemary leaves</name>
+    <type>spice</type>
+  </Ingredient>
+  <Ingredient>
+    <id>6</id>
+    <name>Salt</name>
+    <type>spice</type>
+  </Ingredient>
+  <Ingredient>
+    <id>7</id>
+    <name>Pepper powder</name>
+    <type>spice</type>
+  </Ingredient>
+  <Ingredient>
+    <id>8</id>
+    <name>Coconut milk</name>
+    <type>creamy</type>
+  </Ingredient>
+  <Ingredient>
+    <id>9</id>
+    <name>Curry</name>
+    <type>spice</type>
+  </Ingredient>
+  <Ingredient>
+    <id>10</id>
+    <name>Turmeric</name>
+    <type>spice</type>
+  </Ingredient>
+  <Ingredient>
+    <id>11</id>
+    <name>Chilli powder</name>
+    <type>spice</type>
+  </Ingredient>
+  <Ingredient>
+    <id>12</id>
+    <name>Garlic powder</name>
+    <type>spice</type>
+  </Ingredient>
+  <Ingredient>
+    <id>13</id>
+    <name>Ginger powder</name>
+    <type>spice</type>
+  </Ingredient>
+  <Ingredient>
+    <id>14</id>
+    <name>Olive oil</name>
+    <type>creamy</type>
+  </Ingredient>
+  <Ingredient>
+    <id>15</id>
+    <name>Vegetable oil</name>
+    <type>creamy</type>
+  </Ingredient>
+  <Ingredient>
+    <id>16</id>
+    <name>Sugar</name>
+    <type>creamy</type>
+  </Ingredient>
+  <Ingredient>
+    <id>17</id>
+    <name>Chicken</name>
+    <type>solid</type>
+  </Ingredient>
+  <Ingredient>
+    <id>18</id>
+    <name>Egg</name>
+    <type></type>
+  </Ingredient>
+  <Ingredient>
+    <id>19</id>
+    <name>Curry powder</name>
+    <type>creamy</type>
+  </Ingredient>  
+  <Ingredient>
+    <id>19</id>
+    <name>Coconut milk</name>
+    <type>liquid</type>
+  </Ingredient>
+</ArrayOfIngredient>

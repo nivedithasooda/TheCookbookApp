@@ -1,0 +1,129 @@
+﻿<Window x:Class="WpfApp_SmartCookbook.ViewRecipe"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:WpfApp_SmartCookbook.Classes"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        IsVisibleChanged="Window_IsVisibleChanged"
+        Loaded="Window_Loaded"
+        Closing="Window_Closing" WindowStartupLocation="CenterOwner"
+        Title="View Recipe" Height="650" Width="620">
+    <Grid>
+        <Grid.Resources>
+            <!--DataContext="{Binding Path=selectedRecipe}"-->
+            <local:Bool2String x:Key="star"></local:Bool2String>
+            <local:Bool2StringTooltip x:Key="tooltipHeart"></local:Bool2StringTooltip>
+        </Grid.Resources>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Vertical" Background="LightBlue">
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="The Cookbook App" VerticalAlignment="Top" FontWeight="Bold" FontSize="15" Margin="30,20,0,0"/>
+            </StackPanel>
+            <!--<Button Content="Back to list" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Margin="20,10,400,0" Click="Btn_Back_Click" />-->
+            <StackPanel Orientation="Horizontal">
+                <TextBlock TextWrapping="Wrap" Text="View Recipe" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,15,380,10" FontSize="12">
+                    <!--<TextBlock.TextDecorations>
+                        <TextDecoration PenOffset="1"/>
+                    </TextBlock.TextDecorations>-->
+                </TextBlock>
+                <Button x:Name="Btn_Edit" Content="Edit" Width="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,15,5,0" Click="Btn_EditClic" Visibility="Collapsed"/>
+                <Button x:Name="Btn_Delete" Content="Delete" Width="50" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,15,5,0" Click="Btn_Delete_Click" Visibility="Collapsed"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Margin="20,5,0,0" Orientation="Vertical" Width="250">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock TextWrapping="Wrap" x:Name="Tbk_recipeId" Text="{Binding Path=id}" Visibility="Collapsed"/>
+                        <TextBlock TextWrapping="Wrap" x:Name="Tbk_recipeName" Text="{Binding Path=name}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,10,0" FontSize="20" FontWeight="Bold"/>
+                        <!--<Button Content="Add as favorite" Width="90" HorizontalAlignment="Left"/>-->
+                        <TextBlock x:Name="Tbk_isFavorite" TextWrapping="Wrap" Text="{Binding Path=isFavorite,Converter={StaticResource star}}" ToolTip="{Binding Path=isFavorite,Converter={StaticResource tooltipHeart}}" Foreground="Red" HorizontalAlignment="Right" FontSize="20" MouseDown="StarImage_MouseDown" >
+                        </TextBlock>
+                        <!--<TextBlock TextWrapping="Wrap" Text="My Recipe" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" Background="#FF00FFC5" FontSize="12" ToolTip="Recipe added by you"/> MouseDown="StarImage_MouseDown"-->
+                    </StackPanel>
+                    <TextBlock TextWrapping="Wrap" x:Name="Tbk_Description" Text="{Binding Path=description}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,5,0,10" FontSize="14"/>
+                    <TextBlock TextWrapping="Wrap" Text="Recipe Specifications :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0" FontSize="13">
+                        <!--<TextBlock.TextDecorations>
+                            <TextDecoration PenOffset="1"/>
+                        </TextBlock.TextDecorations>-->
+                    </TextBlock>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock TextWrapping="Wrap" Text="Time required" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,20,0,0" FontSize="12"/>
+                        <TextBlock TextWrapping="Wrap" Text="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="35,20,0,0" FontSize="12">
+                            <Run Text="{Binding Path=timeRequiredHours}"/>
+                                            <Run Text="hours" ToolTip="hours"/>
+                                            <Run Text="{Binding Path=timeRequiredMinutes}"/>
+                                        <Run Text="minutes" ToolTip="minutes"/>
+                        </TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock TextWrapping="Wrap" Text="Servings" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Margin="0,20,0,0" FontSize="12"/>
+                        <TextBlock TextWrapping="Wrap" Text="{Binding Path=servings}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30,20,0,0" FontSize="12"/>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Margin="0,0,30,0" Width="310" HorizontalAlignment="Left">
+                    <!--<StackPanel Orientation="Horizontal">-->
+                    <!--</StackPanel>-->
+                    <!--<Border BorderBrush="Gray" CornerRadius="9" Width="250"
+                Padding="1" BorderThickness="0.5">-->
+                    <Image Source="{Binding Path=image}" Height="200" Width="310" ToolTip="Suggested garnishing"/>
+                    <!--</Border>-->
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5,0,0,0">
+                <StackPanel Orientation="Vertical" Margin="0,20,0,0" Width="250" MaxHeight="310">
+                    <TextBlock TextWrapping="Wrap" Text="Ingredients :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,0,0,0" FontSize="13">
+                        <!--<TextBlock.TextDecorations>
+                            <TextDecoration PenOffset="1"/>
+                        </TextBlock.TextDecorations>-->
+                    </TextBlock>
+                    <Border BorderBrush="Gray" CornerRadius="6"
+                Padding="6" Margin="10,5,10,5" BorderThickness="0.5">
+                    <ScrollViewer VerticalScrollBarVisibility="Auto" Height="240"><ItemsControl Name="Ic_ingredientList" ItemsSource="{Binding Path=ingredients}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Grid Margin="0,0,0,0">
+                                    <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
+                                        <TextBlock TextWrapping="Wrap" x:Name="Tbx_ingredientName" HorizontalAlignment="Left" Width="200" Margin="0,0,0,0" FontSize="12">
+                                            <Run Text="{Binding ingredientName}"/>
+                                            <Run Text=" "/>
+                                            <Run Text="{Binding quantity}"/>
+                                            <Run Text=" "/>
+                                            <Run Text="{Binding measure}"/>
+                                        </TextBlock>
+                                    </StackPanel>
+                                </Grid>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel Margin="10,10,0,15" Orientation="Horizontal"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                    </ItemsControl>
+                        </ScrollViewer>
+                    </Border>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Margin="0,20,0,0" MaxWidth="320" MaxHeight="310">
+                    <TextBlock TextWrapping="Wrap" Text="Instructions :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="35,0,0,0" FontSize="13">
+                        <!--<TextBlock.TextDecorations>
+                            <TextDecoration PenOffset="1"/>
+                        </TextBlock.TextDecorations>1.	Add the coconut oil to a large skillet on medium heat. Add minced garlic.
+                           2.	Once garlic is fragrant, add diced onion and cook until starting to turn translucent, about 5 minutes.
+                           3.	Add coconut milk, diced tomatoes, ginger, maple syrup, and spices. Stir to combine.
+                           4.	Bring to a low simmer and add potatoes.
+                           5.	Cover and let simmer on low/medium until potatoes are softened, 10 - 15 minutes.
+                           6.	Add frozen peas, stir, and let sit for 5 minutes.                                                              7.	Stir again and serve.-->
+                    </TextBlock>
+                    <StackPanel Orientation="Vertical" Width="315">
+                        <Border BorderBrush="Gray" CornerRadius="6"
+                Padding="6" Margin="35,5,10,5" BorderThickness="0.5">
+                        <ScrollViewer VerticalScrollBarVisibility="Auto" Height="240">
+                            <TextBlock TextWrapping="Wrap" Text="{Binding Path=instruction}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" FontSize="12">
+                        </TextBlock>
+                        </ScrollViewer>
+                    </Border>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
