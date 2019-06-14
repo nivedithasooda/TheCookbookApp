@@ -25,7 +25,7 @@
                         <TextDecoration PenOffset="1"/>
                     </TextBlock.TextDecorations>-->
                 </TextBlock>
-                <Button x:Name="Btn_Edit" Content="Edit" Width="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,15,5,0" Click="Btn_EditClic" Visibility="Collapsed"/>
+                <Button x:Name="Btn_Edit" Content="Edit" Width="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="18,15,5,0" Click="Btn_EditClic" Visibility="Collapsed"/>
                 <Button x:Name="Btn_Delete" Content="Delete" Width="50" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,15,5,0" Click="Btn_Delete_Click" Visibility="Collapsed"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
@@ -60,12 +60,12 @@
                         <TextBlock TextWrapping="Wrap" Text="{Binding Path=servings}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30,20,0,0" FontSize="12"/>
                     </StackPanel>
                 </StackPanel>
-                <StackPanel Orientation="Vertical" Margin="0,0,30,0" Width="310" HorizontalAlignment="Left">
+                <StackPanel Orientation="Vertical" Margin="13,5,0,0" Width="310" HorizontalAlignment="Left">
                     <!--<StackPanel Orientation="Horizontal">-->
                     <!--</StackPanel>-->
                     <!--<Border BorderBrush="Gray" CornerRadius="9" Width="250"
                 Padding="1" BorderThickness="0.5">-->
-                    <Image Source="{Binding Path=image,Converter={StaticResource imagePath}}" Height="200" Width="310" ToolTip="Suggested garnishing"/>
+                    <Image Source="{Binding Path=image,Converter={StaticResource imagePath}}" Height="200" Width="293" Stretch="UniformToFill" ToolTip="Suggested garnishing"/>
                     <!--</Border>-->
                 </StackPanel>
             </StackPanel>

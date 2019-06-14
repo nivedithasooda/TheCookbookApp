@@ -119,4 +119,194 @@
 		<name>Split black gram</name>
 		<type>solid</type>
 	</Ingredient>
+	<Ingredient>
+		<id>25</id>
+		<name>Mayonnaise</name>
+		<type>cream</type>
+	</Ingredient>
+	<Ingredient>
+		<id>26</id>
+		<name>Celery</name>
+		<type>cream</type>
+	</Ingredient>
+	<Ingredient>
+		<id>27</id>
+		<name>Mustard</name>
+		<type>spice</type>
+	</Ingredient>
+	<Ingredient>
+		<id>28</id>
+		<name>Vinegar</name>
+		<type>liquid</type>
+	</Ingredient>
+	<Ingredient>
+		<id>30</id>
+		<name>Cumin</name>
+		<type>spice</type>
+	</Ingredient>
+	<Ingredient>
+		<id>31</id>
+		<name>Salmon</name>
+		<type>solid</type>
+	</Ingredient>
+	<Ingredient>
+		<id>32</id>
+		<name>Soy Sauce</name>
+		<type>liquid</type>
+	</Ingredient>
+	<Ingredient>
+		<id>33</id>
+		<name>Brown Sugar</name>
+		<type>spice</type>
+	</Ingredient>
+	<Ingredient>
+		<id>34</id>
+		<name>Broccoli</name>
+		<type>solid</type>
+	</Ingredient>
+	<Ingredient>
+		<id>35</id>
+		<name>Butter</name>
+		<type>cream</type>
+	</Ingredient>
+	<Ingredient>
+		<id>36</id>
+		<name>Cashew</name>
+		<type>solid</type>
+	</Ingredient>
+	<Ingredient>
+		<id>37</id>
+		<name>Zucchini</name>
+		<type>solid</type>
+	</Ingredient>
+	<Ingredient>
+		<id>38</id>
+		<name>Paparika powder</name>
+		<type>spice</type>
+	</Ingredient>
+	<Ingredient>
+		<id>39</id>
+		<name>Maple Syrup</name>
+		<type>liquid</type>
+	</Ingredient>
+	<Ingredient>
+		<id>40</id>
+		<name>Pickle</name>
+		<type>solid</type>
+	</Ingredient>
+	<Ingredient>
+		<id>41</id>
+		<name>Garlic Clove</name>
+		<type>solid</type>
+	</Ingredient>
+	<Ingredient>
+		<id>42</id>
+		<name>Bell Pepper</name>
+		<type>solid</type>
+	</Ingredient>
+	<Ingredient>
+		<id>43</id>
+		<name>Jalapeno</name>
+		<type>solid</type>
+	</Ingredient>
+	<Ingredient>
+		<id>44</id>
+		<name>Oregano</name>
+		<type>spice</type>
+	</Ingredient>
+	<Ingredient>
+		<id>45</id>
+		<name>Cheese</name>
+		<type>cream</type>
+	</Ingredient>
+	<Ingredient>
+		<id>46</id>
+		<name>Spinach</name>
+		<type>solid</type>
+	</Ingredient>
+	<Ingredient>
+		<id>47</id>
+		<name>Honey</name>
+		<type>cream</type>
+	</Ingredient>
+	<Ingredient>
+		<id>48</id>
+		<name>Steak Sauce</name>
+		<type>cream</type>
+	</Ingredient>
+	<Ingredient>
+		<id>49</id>
+		<name>Refined flour</name>
+		<type>solid</type>
+	</Ingredient>
+	<Ingredient>
+		<id>50</id>
+		<name>Cocoa powder</name>
+		<type>cream</type>
+	</Ingredient>
+	<Ingredient>
+		<id>51</id>
+		<name>Garam masala</name>
+		<type>spice</type>
+	</Ingredient>
+	<Ingredient>
+		<id>52</id>
+		<name>Brownie mix</name>
+		<type>solid</type>
+	</Ingredient>
+	<Ingredient>
+		<id>53</id>
+		<name>Chocolate chip</name>
+		<type>solid</type>
+	</Ingredient>
+	<Ingredient>
+		<id>54</id>
+		<name>Tomato puree</name>
+		<type>cream</type>
+	</Ingredient>
+	<Ingredient>
+		<id>55</id>
+		<name>Fenugreek leaves</name>
+		<type>spice</type>
+	</Ingredient>
+	<Ingredient>
+		<id>56</id>
+		<name>Cumin powder</name>
+		<type>spice</type>
+	</Ingredient>
+	<Ingredient>
+		<id>57</id>
+		<name>Yoghurt</name>
+		<type>cream</type>
+	</Ingredient>
+	<Ingredient>
+		<id>58</id>
+		<name>Ginger paste</name>
+		<type>spice</type>
+	</Ingredient>
+	<Ingredient>
+		<id>59</id>
+		<name>Garlic paste</name>
+		<type>spice</type>
+	</Ingredient>
+	<Ingredient>
+		<id>60</id>
+		<name>Coriander powder</name>
+		<type>spice</type>
+	</Ingredient>
+	<Ingredient>
+		<id>61</id>
+		<name>Lime juice</name>
+		<type>cream</type>
+	</Ingredient>
+	<Ingredient>
+		<id>62</id>
+		<name>Peanuts</name>
+		<type>solid</type>
+	</Ingredient>
+	<Ingredient>
+		<id>63</id>
+		<name>Honey</name>
+		<type>solid</type>
+	</Ingredient>
 </ArrayOfIngredient>

@@ -70,10 +70,8 @@
                             <ListBox x:Name="Lbx_Items_Recipes" SelectionChanged="Lbx_Items_Recipes_SelectionChanged" ItemsSource="{Binding Path=recipe}" Visibility="Collapsed" Margin="0" ScrollViewer.VerticalScrollBarVisibility="Auto" Height="320" ScrollViewer.HorizontalScrollBarVisibility="Disabled" >
                                 <ListBox.ItemsPanel>
                                     <ItemsPanelTemplate>
-                                        <!--<ScrollViewer VerticalScrollBarVisibility="Auto" MaxHeight="300">-->
-                                        <WrapPanel Margin="20,10,10,10" Orientation="Horizontal" Width="510"/>
-                                        <!--</ScrollViewer>-->
-                                    </ItemsPanelTemplate>
+                                    <WrapPanel Margin="20,10,10,10" Orientation="Horizontal" Width="510"/>
+                                </ItemsPanelTemplate>
                                 </ListBox.ItemsPanel>
                                 <ListBox.ItemTemplate>
                                     <DataTemplate>

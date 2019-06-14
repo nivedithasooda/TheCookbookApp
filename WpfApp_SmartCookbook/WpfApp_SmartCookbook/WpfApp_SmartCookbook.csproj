@@ -146,13 +146,20 @@
     <Resource Include="Images\browniebites.jpg" />
     <Resource Include="Images\chickencurry.jpg" />
     <Resource Include="Images\chickentikka.jpg" />
-    <Resource Include="Images\frenchfries.jpeg" />
     <Resource Include="Images\friedrice.jpeg" />
     <Resource Include="Images\lemonrice.jpg" />
     <Resource Include="Images\mashedpotato.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\noimage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\frenchfries.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\brocolli.jpg" />
+    <Resource Include="Images\grilledsalmon.jpg" />
+    <Resource Include="Images\grilledzuchini.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

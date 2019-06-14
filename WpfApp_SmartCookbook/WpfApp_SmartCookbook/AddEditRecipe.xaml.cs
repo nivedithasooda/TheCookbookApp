@@ -235,7 +235,7 @@ namespace WpfApp_SmartCookbook
                     else
                     {
                         Regex regEx = new Regex(@"^\d+\.?\d*$");
-                        if (!regEx.IsMatch(quantity) || Convert.ToInt32(quantity) <= 0)//newly added
+                        if (!regEx.IsMatch(quantity)|| Convert.ToDecimal(quantity) <= 0)//newly added Convert.ToInt32(quantity) <= 0
                         {
                             MessageBox.Show("Please enter a valid quantity", ":|", MessageBoxButton.OK, MessageBoxImage.Error);
                             Tbx_quantity.Focus();
@@ -530,7 +530,7 @@ namespace WpfApp_SmartCookbook
                 if (quantity != "")
                 {
                     Regex regEx = new Regex(@"^\d+\.?\d*$");
-                    if (!regEx.IsMatch(quantity) || Convert.ToInt32(quantity) <= 0)
+                    if (!regEx.IsMatch(quantity) || Convert.ToDecimal(quantity) <= 0)
                     {
                         MessageBox.Show("Please enter a valid quantity", ":|", MessageBoxButton.OK, MessageBoxImage.Error);
                         Tbx_quantityEdit.Focus();
@@ -564,6 +564,11 @@ namespace WpfApp_SmartCookbook
                     }
             (Lbx_ingredients.SelectedItem as RecipeIngredient).quantity = quantity;
                     (Lbx_ingredients.SelectedItem as RecipeIngredient).measure = measure;
+                }
+                else{
+                    MessageBox.Show("Please enter a quantity", ":|", MessageBoxButton.OK, MessageBoxImage.Error);
+                    Tbx_quantity.Focus();
+                    return;
                 }
             }
         }
